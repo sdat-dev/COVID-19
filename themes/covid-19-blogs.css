@@ -1,0 +1,25 @@
+/*------------------------------------------------------------------
+Primary use:    Covid-19-blogs.css used to style covid-19-blogs page
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[Layout]
+-------------------------------------------------------------------*/
+
+.blog-summary{
+    margin-bottom:5px;
+}
+
+.blog-summary-container{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #bbbbbb;
+}
+
+.post-info{
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.post-info > .purple-font{
+    font-weight: bold;
+}

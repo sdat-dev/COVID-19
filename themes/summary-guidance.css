@@ -1,0 +1,59 @@
+/*------------------------------------------------------------------
+
+Primary use:    Used to style summary guidance page
+-------------------------------------------------------------------*/
+
+.nav-pills .nav-link.active{
+    background-color: #edba32;
+    color: #46166C;
+}
+
+.nav-pills .nav-link:hover{
+    background-color:#edba32;
+    color: #46166C;
+}
+
+.nav-link{
+    background-color: #46166C;
+    color: white;
+    border: 1px solid #46166C;
+}
+
+.nav-item{
+    margin-right: 20px;
+    margin-bottom: 10px;
+    width: 90px;
+    text-align: center;
+}
+
+table{
+    clear: both;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+th{
+    background-color: #46166C;
+    color: white;
+    padding: 10px;
+}
+
+.first-column-cell{
+    width: 20%;
+}
+
+.symbol-cell{
+    text-align: center;
+}
+
+.legend-content{
+    margin-bottom: 10px;
+    float: left;
+}
+
+.legend-text{
+    vertical-align: middle;
+}
