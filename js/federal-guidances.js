@@ -25,7 +25,11 @@ request.onload = function(){
     'Agency for International Development (USAID)',
     'National Security Agency',
     'National Endowment for the Humanities',
-    'Office of Management and Budget (OMB)​'];
+    'Office of Management and Budget (OMB)​',
+    'Department of Labor (DOL)',
+    'Department of State',
+    'Chief Acquisition Officers Council (CAOC)'
+    ];
 
     let HHS_sponsor_order = 
     [

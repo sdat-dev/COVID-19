@@ -34,10 +34,14 @@ request.onload = function(){
      'Centers for Disease Control and Prevention (CDC)',
      'National Oceanic and Atmospheric Administration (NOAA)',
      'Federal Emergency Management Administration (FEMA)',
+     'Agency for Healthcare Research and Quality (AHRQ)',
+     'Department of Education (DoED) - Institute of Education Sciences (IES)',
+     'Department of Energy (DOE), ARPA-E',
      'OMB M-20-17'
     ]
     let agencyAcronym = ['NSF', 'NIH', 'NASA', 'DOD', 'AMRAA', 'AFOSR', 'DARPA', 'USAID', 'DOE', 'ONR', 'DOI',
-                        'FDA','HRSA','SAMHSA','DOJ','NIFA','FTA','EPA', 'NEH', 'NEA', 'IMLS', 'DOC', 'CDC',  'NOAA', 'FEMA', 'OMB'];
+                        'FDA','HRSA','SAMHSA','DOJ','NIFA','FTA','EPA', 'NEH', 'NEA', 'IMLS', 'DOC', 'CDC',  'NOAA', 'FEMA', 
+                        'AHRQ', 'IES', 'ARPA','OMB'];
     let GuidanceProperties = ['Late Proposal Acceptance Guidance', 'Allowability of salaries and other project activities', 'Late SAM Registration',
 'Other Program Costs', 'Trainees', 'Non Refundable Travel Charges Allowable?', 'No Cost Extensions', 'Progress & Financial Reporting',
 'Pre Award & Other Expenses', 'Prior Approval', 'PPE Donations/Re-budgeting'];

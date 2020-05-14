@@ -204,6 +204,7 @@ Primary use:    Common.css file used for styling header, footer and
 {
     color: white;
     margin-bottom: 0px;
+    line-height: 1.15;
 }
 
 .list-lower-alpha {
