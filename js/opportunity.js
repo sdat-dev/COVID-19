@@ -33,22 +33,35 @@ request.onload = function(){
 
 let generateOpportunityAccordionContent = function(opportunities){
     let content = '';
+    var today = new Date();
     for(let i = 0; i < opportunities.length; i++)
     {
-        let imageElement = (opportunities[i].logo == '')? '' : '<div class = "col-xl-2 col-lg-3"><img class = "agency-logo" src = "'+ opportunities[i].logo +'" /></div>';
-        content = content + '<div class = "display-flex opportunity-container search-container">'+ imageElement + 
-               '<div class = "col-xl-10 col-lg-9">'+ '<h4 class = "opp-header black-content-header-no-margin">'+ opportunities[i].title +'</h4>'+'<div class = "opp-details display-flex">'+
-               
-                    '<div class = "col-sm-12 col-md-12 col-lg-12 col-xl-6">'+
-                        '<i class="fas fa-flag"></i> <strong>Agency Name: </strong>' + opportunities[i].agency +
-                        '<br>' +
-                        '<i class="fas fa-dollar-sign"></i> <strong>Estimated Funding: </strong>' + opportunities[i].fundingLevel +
-                        '<br>' +
-                    '</div><div class = "col-sm-12 col-md-12 col-lg-12 col-xl-6">' +
-                        '<i class="fas fa-calendar-day"></i> <strong>Due Date: </strong>' + opportunities[i].dueDate +
-                        '<br></div></div></div>' +
-               '<p class = "opp-description">' + opportunities[i].description + '</p>' +
-               '<button type = "button" class = "details-button" onclick = "location.href = \'' + opportunities[i].website + '\'">View Details</button></div>';
+        var dueDate = new Date(opportunities[i].dueDate);
+        if(Object.prototype.toString.call(dueDate) === "[object Date]" && !isNaN(dueDate.getTime()))
+        {
+            dueDate = new Date(opportunities[i].dueDate);
+        }
+        else{
+            dueDate = new Date();
+        }
+        //Only add the oportunities which have due dates after today
+        if(dueDate >= today)
+        {
+            let imageElement = (opportunities[i].logo == '')? '' : '<div class = "col-xl-2 col-lg-3"><img class = "agency-logo" src = "'+ opportunities[i].logo +'" /></div>';
+            content = content + '<div class = "display-flex opportunity-container search-container">'+ imageElement + 
+                   '<div class = "col-xl-10 col-lg-9">'+ '<h4 class = "opp-header black-content-header-no-margin">'+ opportunities[i].title +'</h4>'+'<div class = "opp-details display-flex">'+
+                   
+                        '<div class = "col-sm-12 col-md-12 col-lg-12 col-xl-6">'+
+                            '<i class="fas fa-flag"></i> <strong>Agency Name: </strong>' + opportunities[i].agency +
+                            '<br>' +
+                            '<i class="fas fa-dollar-sign"></i> <strong>Estimated Funding: </strong>' + opportunities[i].fundingLevel +
+                            '<br>' +
+                        '</div><div class = "col-sm-12 col-md-12 col-lg-12 col-xl-6">' +
+                            '<i class="fas fa-calendar-day"></i> <strong>Due Date: </strong>' + opportunities[i].dueDate +
+                            '<br></div></div></div>' +
+                   '<p class = "opp-description">' + opportunities[i].description + '</p>' +
+                   '<button type = "button" class = "details-button" onclick = "location.href = \'' + opportunities[i].website + '\'">View Details</button></div>';
+        }     
     }
     return content;
 }
