@@ -6,8 +6,32 @@ Primary use:    Covid-19-blogs.css used to style covid-19-blogs page
 [Layout]
 -------------------------------------------------------------------*/
 
-.blog-summary{
-    margin-bottom:5px;
+#dib-template-3 {
+    text-align:left;
+}
+
+.dib-homepage-title{
+    color: #46166C;
+    font-family: 'TradeGothicLTStd-BdCn20', Helvetica, Arial, sans-serif;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-top: 0;
+}
+
+.dib-post-title > a{
+    color: #46166C;
+}
+
+.dib-single > .dib-post-title{
+    color: #46166C;
+    font-weight: bold;
+}
+
+.dib-post-title > a:hover{
+    color: #46166C;
 }
 
 .blog-summary-container{
