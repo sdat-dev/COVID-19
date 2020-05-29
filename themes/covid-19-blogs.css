@@ -6,7 +6,7 @@ Primary use:    Covid-19-blogs.css used to style covid-19-blogs page
 [Layout]
 -------------------------------------------------------------------*/
 
-#dib-template-3 > .dib-homepage-title {
+#dib-template-3{
     text-align:left;
 }
 
