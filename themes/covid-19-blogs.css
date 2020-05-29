@@ -6,7 +6,7 @@ Primary use:    Covid-19-blogs.css used to style covid-19-blogs page
 [Layout]
 -------------------------------------------------------------------*/
 
-#dib-template-3 {
+#dib-template-3 > .dib-homepage-title {
     text-align:left;
 }
 
@@ -23,11 +23,6 @@ Primary use:    Covid-19-blogs.css used to style covid-19-blogs page
 
 .dib-post-title > a{
     color: #46166C;
-}
-
-.dib-single > .dib-post-title{
-    color: #46166C;
-    font-weight: bold;
 }
 
 .dib-post-title > a:hover{
