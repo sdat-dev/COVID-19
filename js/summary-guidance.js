@@ -54,7 +54,7 @@ request.onload = function(){
         let agencySummaryGuidance = summaryGuidance.filter(function(guidance){
             return guidance.agency == agencies[i];
         });
-        navigationContent = appendAgencytoNavigation(agencyAcronym, agencySummaryGuidance, i, navigationContent);
+        navigationContent = appendAgencytoNavigation(agencyAcronym, i, navigationContent);
         mainContent = appendContentforSummaryGuidance(GuidanceProperties, agencySummaryGuidance, i, mainContent);
 
     }
@@ -64,7 +64,7 @@ request.onload = function(){
     appendPostDate(summaryGuidances[0].updateddate);
 }
 
-let appendAgencytoNavigation = function(agencyAcronym, agencySummaryGuidance, index, navigationContent){
+let appendAgencytoNavigation = function(agencyAcronym, index, navigationContent){
     let buttonContent = '';
     let agencyId = "agency" + index.toString();
     if(index == 0)
@@ -118,11 +118,14 @@ let generateTableContent = function(GuidanceProperties, agencySummaryGuidance, t
 {
     tableContent = '<table><thead><tr><th>Information</th><th>Answer</th><th>Description</th></tr></thead><tbody>';
     let tbodyContent = '';
-    for(let i = 0; i < GuidanceProperties.length; i++){
-        let answerSymbol = getCircleSymbols(agencySummaryGuidance[0].guidanceAnswers[i]);
-        let rowElem = '<tr><td class = "first-column-cell">' + GuidanceProperties[i] + 
-        '</td><td class = "symbol-cell">'+ answerSymbol +'</td><td>'+ agencySummaryGuidance[0].guidanceAnswerDescription[i] +'</td></tr>';
-        tbodyContent = tbodyContent + rowElem;
+    if(agencySummaryGuidance.length > 0)
+    {
+        for(let i = 0; i < GuidanceProperties.length; i++){
+            let answerSymbol = getCircleSymbols(agencySummaryGuidance[0].guidanceAnswers[i]);
+            let rowElem = '<tr><td class = "first-column-cell">' + GuidanceProperties[i] + 
+            '</td><td class = "symbol-cell">'+ answerSymbol +'</td><td>'+ agencySummaryGuidance[0].guidanceAnswerDescription[i] +'</td></tr>';
+            tbodyContent = tbodyContent + rowElem;
+        }
     }
     tableContent = tableContent + tbodyContent + '</tbody></table>'+ '<br>';
     return tableContent;
@@ -130,23 +133,27 @@ let generateTableContent = function(GuidanceProperties, agencySummaryGuidance, t
 
 let generateLinkContent = function(agencySummaryGuidance){
 
-    let linkContent = (agencySummaryGuidance[0].guidanceLinks.length > 0)?
+    let linkContent = (agencySummaryGuidance.length > 0 &&
+                       agencySummaryGuidance[0].guidanceLinks.length > 0)?
     '<b class = "purple-font">Additional Resource Links</b><ul class = "sub-list">': '';
-    for(let i = 0; i < agencySummaryGuidance[0].guidanceLinks.length; i++)
+    if(agencySummaryGuidance.length > 0)
     {
-      if(null!= agencySummaryGuidance[0].guidanceLinks[i])
-      {
-        linkContent = linkContent + '<li><a href = "'+ agencySummaryGuidance[0].guidanceLinks[i]+'">'+
-        agencySummaryGuidance[0].guidanceDocuments[i] + '</a></li>';
-      }
+        for(let i = 0; i < agencySummaryGuidance[0].guidanceLinks.length; i++)
+        {
+            if(null!= agencySummaryGuidance[0].guidanceLinks[i])
+            {
+                linkContent = linkContent + '<li><a href = "'+ agencySummaryGuidance[0].guidanceLinks[i]+'">'+
+                agencySummaryGuidance[0].guidanceDocuments[i] + '</a></li>';
+            }
+        }
     }
-    
     return linkContent + '</ul>';
 }
 
 let generateComment = function(agencySummaryGuidance){
     let CommentElement = '';
-    if(agencySummaryGuidance[0].guidanceComments.trim() != '')
+    if(agencySummaryGuidance.length > 0 &&
+       agencySummaryGuidance[0].guidanceComments.trim() != '')
     {
         CommentElement = '<p><b class = "purple-font">Comments</b><br>'+ agencySummaryGuidance[0].guidanceComments +'</p>';
     }
@@ -154,8 +161,16 @@ let generateComment = function(agencySummaryGuidance){
 }
 
 let generateFOA = function(agencySummaryGuidance){
-    let FOAElement = '<h2 class = "content-header-no-margin">'+ agencySummaryGuidance[0].agency +'</h2>'
-    + '<p><b class = "purple-font">COVID-19 FOA Site</b><br>'+ agencySummaryGuidance[0].FOASiteLink +'</p>';
+    let FOAElement = '';
+    if(agencySummaryGuidance.length > 0)
+    {
+        FOAElement = '<h2 class = "content-header-no-margin">'+ agencySummaryGuidance[0].agency +'</h2>'
+                    + '<p><b class = "purple-font">COVID-19 FOA Site</b><br>'+ agencySummaryGuidance[0].FOASiteLink +'</p>';
+    }
+    else{
+        FOAElement = '<h2 class = "content-header-no-margin"></h2>'
+                    + '<p><b class = "purple-font">COVID-19 FOA Site</b><br></p>';
+    }
     return FOAElement;
 }
 
