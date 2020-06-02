@@ -37,7 +37,7 @@ request.onload = function(){
      'Agency for Healthcare Research and Quality (AHRQ)',
      'Department of Education (DoED) - Institute of Education Sciences (IES)',
      'Department of Energy (DOE), ARPA-E',
-     'OMB M-20-17'
+     'United States Office of Management and Budget (OMB)'
     ]
     let agencyAcronym = ['NSF', 'NIH', 'NASA', 'DOD', 'AMRAA', 'AFOSR', 'DARPA', 'USAID', 'DOE', 'ONR', 'DOI',
                         'FDA','HRSA','SAMHSA','DOJ','NIFA','FTA','EPA', 'NEH', 'NEA', 'IMLS', 'DOC', 'CDC',  'NOAA', 'FEMA', 
