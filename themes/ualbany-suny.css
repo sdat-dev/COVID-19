@@ -31,3 +31,15 @@ Primary use:    covid-home.css used to style home-page for COVID-19
     margin-left: 10px;
     margin-bottom: 20px;
 }
+
+.message {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: none;
+}
+
+.message-header,.message-footer{
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
