@@ -96,10 +96,10 @@ Primary use:    Common.css file used for styling header, footer and
 }
 
 .link-img > img{
-    height:30px;
+    height:40px;
     float: right;
     position: absolute; 
-    top: 8px; 
+    top: 5px; 
     right:5px;
 }
 
