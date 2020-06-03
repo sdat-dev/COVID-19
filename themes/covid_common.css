@@ -37,7 +37,11 @@ Primary use:    Common.css file used for styling header, footer and
     width: 100%;
 }
 
-.social-media-container > button{
+.content-tool-bar{
+    position: relative;
+}
+
+.social-media-button{
     color: white;
     background-color: #46166C;
     padding: 9px;
@@ -49,9 +53,54 @@ Primary use:    Common.css file used for styling header, footer and
     border-radius: 1%;
 }
 
-.social-media-container > button a{
+.social-media-button > a{
     color: inherit;
     text-decoration: none;
+}
+
+.social-media-button > a img{
+    height: 30px;
+}
+
+.message-button{
+    color: #46166C;
+    background-color:#eeb211;;
+    padding: 4px 5px 7px 5px;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'News Cycle', Helvetica, Arial, sans-serif;
+    margin-top: 20px;
+    margin-left: 15px;
+    border-radius: 1%;
+    position: absolute;
+    top: 0px;
+}
+
+.button-link{
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    line-height: 22px;
+    width: 200px;
+    position: relative;
+}
+
+.button-link > .link-text{
+    left: 0px;
+    position: relative;
+    width: 170px;
+}
+
+.button-link > .link-img{
+   display: inline;
+}
+
+.link-img > img{
+    height:30px;
+    float: right;
+    position: absolute; 
+    top: 8px; 
+    right:5px;
 }
 
 .grey-content-header {
