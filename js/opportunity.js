@@ -13,7 +13,8 @@ request.onload = function(){
     let FederalsubCategories = ['Federal - All CDC','Federal - All HHS', 'Federal - All DoD', 'Federal - All DoE'];
     let content = '';
     let categoryCounter = 1;
-
+    let total = document.getElementById('totalnoofopps');
+    total.innerText = '(' + opportunity.length + ' Solicitations)';
     distinctCategories.forEach(function(category){
         let categoryOpportunities = opportunity.filter(function(opp){ 	
             return opp.category == category;
