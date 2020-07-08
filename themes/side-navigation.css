@@ -39,19 +39,23 @@ Primary use:    side-navigation.css file used for styling components
 }
 
 .navigation-items {
-    border-bottom: 2px solid #909090;
+    border-bottom: 3px solid #e0e0e0;
     color: #46166B;
     font-weight: 400;
     list-style-type: none;
     padding: 10px 10px 10px 0px;
+    font-family: 'PublicSans', sans-serif!important;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 #expanded-navigation-item {
-    border-bottom: 2px solid #909090;
+    border-bottom: 2px solid #e0e0e0;
     color: #46166B;
     font-weight: 400;
     list-style-type: none;
     padding: 10px 0px 0px 0px;
+    font-family: 'PublicSans', sans-serif!important;
 }
 
 .navigation-items>a, .first-sub-navigation-item>a, .last-sub-navigation-item>a, #expanded-navigation-item>a, .sub-navigation-items>a {
@@ -108,5 +112,9 @@ Primary use:    side-navigation.css file used for styling components
 @media only screen and (min-width: 1200px) {
     #navigation-bar {
         margin-left: 6%;
+        padding-right: 10px;
+    }
+    #expanded-navigation-item {
+        padding-right: 10px;
     }
 }
