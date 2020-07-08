@@ -82,19 +82,19 @@ Primary use:    side-navigation.css file used for styling components
     color: #46166B;
     margin-top: 10px;
     padding: 10px 10px 10px 30px;
-    border-top: 2px solid #909090;
+    border-top: 2px solid #e0e0e0;
 }
 
 .last-sub-navigation-item {
     color: #46166B;
     padding: 10px 10px 10px 30px;
-    border-top: 2px solid #909090;
+    border-top: 2px solid #e0e0e0;
 }
 
 .sub-navigation-items {
     color: #46166B;
     padding: 10px 10px 10px 30px;
-    border-top: 2px solid #909090;
+    border-top: 2px solid #e0e0e0;
 }
 
 @media only screen and (min-width: 768px) {

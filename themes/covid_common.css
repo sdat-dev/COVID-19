@@ -319,6 +319,15 @@ Primary use:    Common.css file used for styling header, footer and
     vertical-align: middle;
 }
 
+a {
+    color: #46166C;
+}
+
+a:hover {
+    color: #46166C;
+}
+
+
 @media only screen and (max-width: 340px)
 {
     .ualbany-logo{
