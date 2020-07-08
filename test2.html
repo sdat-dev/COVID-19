@@ -740,12 +740,12 @@ display: inline-block;
 
 function change_login_button() {
   var $el = $('#link');
-  var $el2 = $('#login span:last-child');
-  textNode = $("#login span:last-child").text();
-  $el.find('span.glyphicon').toggleClass('glyphicon-log-out glyphicon-log-in');
-  textNode = ($el.hasClass('showLogin') ? 'Logout' : 'Login');
+  var $el2 = $('#link span:last-child');
+  textNode = $("#link span:last-child").text();
+  $el.find('').toggleClass('');
+  textNode = ($el.hasClass('') ? '' : '');
   $el2.text(textNode);
-  $el.toggleClass('showLogin');
+  $el.toggleClass('');
 }
 
 
