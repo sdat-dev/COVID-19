@@ -32,6 +32,14 @@ Primary use:    Common.css file used for styling header, footer and
     background: transparent;
 }
 
+@font-face {
+    font-family: 'PublicSans';
+    src: 
+         url('https://www.albany.edu/communicationsmarketing/assets/fonts/publicsans/PublicSans-ExtraLight.woff2') format('woff2'), /* Super Modern Browsers */
+         url('https://www.albany.edu/communicationsmarketing/assets/fonts/publicsans/PublicSans-ExtraLight.woff') format('woff'), /* Pretty Modern Browsers */
+         url('https://www.albany.edu/communicationsmarketing/assets/fonts/publicsans/PublicSans-ExtraLight.ttf')  format('truetype'); /* Safari, Android, iOS */
+  }
+
 .buffer {
     height: 100px;
     width: 100%;
@@ -185,8 +193,7 @@ Primary use:    Common.css file used for styling header, footer and
 }
 
 .email-link{
-    color: cornflowerblue;
-    text-decoration: underline;
+    color: #46166C;
 }
 
 .more-text{
@@ -211,7 +218,7 @@ Primary use:    Common.css file used for styling header, footer and
 .main-content {
     color: #333333;
     font-size: 20px;
-    font-family: 'News Cycle', Helvetica, Arial, sans-serif;
+    font-family: 'PublicSans', sans-serif!important;
     line-height: 26px;
     padding-bottom: 30px;
 }
@@ -310,6 +317,15 @@ Primary use:    Common.css file used for styling header, footer and
     margin-left: 20px;
     vertical-align: middle;
 }
+
+a {
+    color: #46166C;
+}
+
+a:hover {
+    color: #46166C;
+}
+
 
 @media only screen and (max-width: 340px)
 {
