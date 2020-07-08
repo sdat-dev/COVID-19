@@ -312,14 +312,23 @@ display: inline-block;
 
 .listSub{
     display: block;
-    content: '\f105';
-    font-family: FontAwesome;
-    font-size: 15px;
-    line-height: 15px;
-  
-    top: 4px;
-    right: 11px;
-    color: #f6f4f8;
+    position: relative;
+    padding-right: 22px;
+    font-size: 14px;
+    font-family: 'PublicSans', sans-serif!important;
+    background: transparent;
+    letter-spacing: 1px;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    text-transform: none;
+    -webkit-transition: color 0.25s ease;
+    -moz-transition: color 0.25s ease;
+    -ms-transition: color 0.25s ease;
+    -o-transition: color 0.25s ease;
+    transition: color 0.25s ease;
+    line-height: 2.4rem;
+
 
 }
 
@@ -524,8 +533,7 @@ display: inline-block;
        
        
         <img src="https://www.albany.edu/themes/albany_bootstrap_theme/images/menu-arrow.png" >
-        <a id ="link" href="#" >
-           
+        <button class="circle1" id="buttonatag" data-toggle="collapse" data-target="#navbarSupportedContent">
 
         </a>
         <div class="positioner">
@@ -732,7 +740,7 @@ display: inline-block;
         });
 
 
-        $(document).ready(function() {
+       /*  $(document).ready(function() {
   $('#link').on('click', function() {
     change_login_button();
   });
@@ -740,14 +748,14 @@ display: inline-block;
 
 function change_login_button() {
   var $el = $('#link');
-  var $el2 = $('#link span:last-child');
-  textNode = $("#link span:last-child").text();
-  $el.find('').toggleClass('');
-  textNode = ($el.hasClass('') ? '' : '');
+  var $el2 = $('#login span:last-child');
+  textNode = $("#login span:last-child").text();
+  $el.find('span.glyphicon').toggleClass('glyphicon-log-out glyphicon-log-in');
+  textNode = ($el.hasClass('showLogin') ? 'Logout' : 'Login');
   $el2.text(textNode);
-  $el.toggleClass('');
+  $el.toggleClass('showLogin');
 }
-
+ */
 
 
 
