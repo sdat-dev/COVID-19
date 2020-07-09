@@ -1,3 +1,7 @@
+.top-menu{
+    position: fixed;
+    width: 100%;
+}
 .bor {
     margin-top: 10px;
     border-radius: 1px;
@@ -10,7 +14,6 @@
     border-right-style: solid;
     border-right-color: rgb(97, 43, 138)
 }
-
 
 .hh {
     background-color: #46166C;
@@ -147,9 +150,7 @@
     display: block;
     margin: auto;
 }
-.fixed{
-    position:fixed;
-}
+
 .test{    
     line-height: 20px;
     display:block;
@@ -160,7 +161,6 @@
     font-size: 20px;
     line-height: 18px;
     background: transparent;
-    position:fixed;
     width: 100%;
 }
 
