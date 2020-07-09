@@ -1,13 +1,8 @@
-.top-menu{
-    position: fixed;
-    width: 100%;
-}
 .bor {
     margin-top: 10px;
     border-radius: 1px;
     -moz-border-radius: 1px;
     -webkit-border-radius: 1px;
-
     position: initial;
     border-right: 1px solid #612b8a;
     border-right-width: 1px;
@@ -20,33 +15,26 @@
     overflow: auto;
     color: white;
     list-style-type: none;
-
     border-top: 1px solid #612b8a;
     border-top-width: 1px;
     border-top-style: solid;
     border-top-color: rgb(97, 43, 138);
+}
 
+.fo {
     border-bottom: 1px solid #612b8a;
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-bottom-color: rgb(97, 43, 138);
-    width:100%;
+    margin-left: 0;
+    margin-right: 0;
 }
 
-.fo{
-    margin-right: 0;
-    margin-left: 0;
-}
 .span1 {
     text-align: center;
 }
 
 .coll {
-    font-family: 'TradeGothicLTStd-BdCn20', Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    line-height: 40px;
-    font-weight: 400;
-    color: #fff;
     margin-left: 30px;
     display: block;
     list-style: none;
@@ -54,13 +42,10 @@
 }
 
 .col2 {
-    font-family: 'TradeGothicLTStd-BdCn20', Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    line-height: 40px;
-    font-weight: 400;
     color: #fff;
-    margin-left: 30px;
+    margin-left: 10px;
     display: block;
+    margin-top: 7px;
 }
 
 .icon {
@@ -127,6 +112,13 @@
     position: relative;
 }
 
+.circle1 {
+    width: 5px;
+    height: 5px;
+    position: relative;
+    color: blue;
+}
+
 .icon1 {
     top: 50%;
     left: 50%;
@@ -151,17 +143,27 @@
     margin: auto;
 }
 
-.test{    
+.test {
     line-height: 20px;
-    display:block;
-    position:relative;
-    margin: 0 auto; 
+    display: block;
+    position: relative;
+    margin: 0 auto;
     text-align: center;
-    font-family: 'TradeGothicLTStd-BdCn20', Helvetica, Arial, sans-serif!important;
-    font-size: 20px;
-    line-height: 18px;
-    background: transparent;
-    width: 100%;
+}
+
+.test a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #555;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
 .test img {
@@ -169,34 +171,19 @@
     margin: auto;
 }
 
-.test > button{
-    background-image: url("https://www.albany.edu/themes/albany_bootstrap_theme/images/menu-arrow.png");
-    color: #eeb211;
-    width: 160px;
-    height: 48px;
-    border: none;
-}
-
-.test > button:focus{
-    border: none;
-    outline: none;
-    color: white;
-}
-
-.positioner{
-    padding-top:25px;
+.positioner {
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.topnav-right{
+.topnav-right {
     float: right;
-    font-family: 'TradeGothicLTStd-BdCn20', Helvetica, Arial, sans-serif!important;
-    padding-top:30px;
+    font-family: 'TradeGothicLTStd-BdCn20', Helvetica, Arial, sans-serif !important;
+    padding-top: 30px;
 }
 
-.topnav-right a{
+.topnav-right a {
     display: inline-block;
     background: transparent;
     color: #ffffff;
@@ -206,11 +193,11 @@
     padding: 6px 13px 0 13px
 }
 
-.headingList{
+
+.headingList {
     font-family: 'TradeGothicLTStd-BdCn20', Helvetica, Arial, sans-serif;
     font-size: 16px;
     background: transparent;
-
     line-height: 20px;
     font-weight: 400;
     color: #fff;
@@ -219,12 +206,12 @@
     font-weight: bold;
 }
 
-.listSub{
+.listSub {
     display: block;
     position: relative;
     padding-right: 22px;
     font-size: 14px;
-    font-family: 'PublicSans', sans-serif!important;
+    font-family: 'PublicSans', sans-serif !important;
     background: transparent;
     letter-spacing: 1px;
     padding: 0;
@@ -237,4 +224,45 @@
     -o-transition: color 0.25s ease;
     transition: color 0.25s ease;
     line-height: 2.4rem;
+}
+
+.linkforlist {
+    color: white;
+}
+
+.icon_new {
+    display: block;
+    margin: auto;
+}
+
+.test {
+    line-height: 20px;
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'TradeGothicLTStd-BdCn20', Helvetica, Arial, sans-serif !important;
+    font-size: 20px;
+    line-height: 18px;
+    background: transparent;
+    width: 100%;
+}
+
+.test img {
+    display: block;
+    margin: auto;
+}
+
+.test>button {
+    background-image: url("https://www.albany.edu/themes/albany_bootstrap_theme/images/menu-arrow.png");
+    color: #eeb211;
+    width: 160px;
+    height: 48px;
+    border: none;
+}
+
+.test>button:focus {
+    border: none;
+    outline: none;
+    color: white;
 }
