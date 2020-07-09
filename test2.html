@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,14 +7,14 @@
     <link rel="shortcut icon" href="https://www.albany.edu/sites/default/files/favicon_0.ico"
         type="image/vnd.microsoft.icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <link rel="stylesheet" href="themes/covid_common.css" />
-    <link rel="stylesheet" href="themes/side-navigation.css" />
-    <link rel="stylesheet" href="themes/custom-fonts.css" />
-    <link rel="stylesheet" href="themes/footer.css" />
     <link rel="stylesheet" href="themes/bootstrap/css/bootstrap-grid.min.css" />
     <link rel="stylesheet" href="themes/bootstrap/css/bootstrap-reboot.min.css" />
     <link rel="stylesheet" href="themes/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="themes/covid_common.css" />
+    <link rel="stylesheet" href="themes/top-menu.css" />
+    <link rel="stylesheet" href="themes/side-navigation.css" />
+    <link rel="stylesheet" href="themes/custom-fonts.css" />
+    <link rel="stylesheet" href="themes/footer.css" />
     <link rel="stylesheet" href="themes/home.css" />
     <script src="libraries/jquery/jquery-3.3.1.slim.js" async></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -34,308 +33,6 @@
                 j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-WNRD5G');</script>
-
-    <style>
-        .bor {
-
-            margin-top: 10px;
-            border-radius: 1px;
-            -moz-border-radius: 1px;
-            -webkit-border-radius: 1px;
-            position: initial;
-
-
-            border-right: 1px solid #612b8a;
-            border-right-width: 1px;
-            border-right-style: solid;
-            border-right-color: rgb(97, 43, 138)
-        }
-
-
-        .hh {
-            background-color: #46166C;
-            overflow: auto;
-            color: white;
-            list-style-type: none;
-
-            border-top: 1px solid #612b8a;
-            border-top-width: 1px;
-            border-top-style: solid;
-            border-top-color: rgb(97, 43, 138);
-
-
-
-            border-bottom: 1px solid #612b8a;
-            border-bottom-width: 1px;
-            border-bottom-style: solid;
-            border-bottom-color: rgb(97, 43, 138)
-        }
-
-        .span1 {
-            text-align: center;
-
-        }
-
-        .coll {
-
-            font-family: 'TradeGothicLTStd-BdCn20', Helvetica, Arial, sans-serif;
-            font-size: 14px;
-            line-height: 40px;
-            font-weight: 400;
-            color: #fff;
-            margin-left: 30px;
-            display: block;
-            list-style: none;
-            padding-left: 50px;
-
-        }
-
-
-
-        .col2 {
-
-            font-family: 'TradeGothicLTStd-BdCn20', Helvetica, Arial, sans-serif;
-            font-size: 14px;
-            line-height: 40px;
-            font-weight: 400;
-            color: #fff;
-            margin-left: 30px;
-            display: block;
-
-        }
-
-
-        .icon {
-            display: block;
-            margin-left: 100px;
-            margin-right: auto;
-            margin-bottom: auto;
-            margin-top: 1px;
-            cursor: pointer;
-        }
-
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .bor ul {
-            list-style: none;
-
-
-        }
-
-        .col2 ul {
-            list-style: none;
-        }
-
-        .arrow-down {
-            width: 0;
-            height: 0;
-            border-left: 50px solid transparent;
-            border-right: 50px solid transparent;
-
-            margin: 0 auto;
-            border-top: 50px solid #46166c;
-
-
-
-
-            position: inherit;
-        }
-
-
-
-        .arrow-down .btn {
-
-            text-align: center;
-
-            width: 0;
-            color: #edba32;
-            margin: auto;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 2;
-            height: 0px;
-            font-size: 15px;
-            transform: translate(-475%, -375%);
-            position: relative;
-        }
-
-        .arrow-down .btn .icon {
-
-            text-align: center;
-
-            width: 0;
-            color: #edba32;
-            margin: auto;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 2;
-            height: 0px;
-            font-size: 15px;
-            transform: translate(-475%, -375%);
-            position: relative;
-        }
-
-
-
-
-
-        .circle1 {
-
-            width: 5px;
-            height: 5px;
-            position: relative;
-           
-            color :blue;
-
-        }
-
-        .icon1 {
-
-            top: 50%;
-            left: 50%;
-            height: 50%;
-            transform: translate(-100%, -450%);
-            width: 10px;
-            height: 10px;
-            display: block;
-
-            color: #edba32;
-        }
-
-
-        .arrow-down .btn active {
-            color: #edba32;
-        }
-
-
-        .arrow-down .btn .icon hover {
-            color: #edba32;
-        }
-
-        .icon_new {
-
-
-            display: block;
-            margin: auto;
-        }
-
-
-        .test{    
-    
-    line-height: 20px;
-    
-    display:block;
-    position:relative;
-   margin: 0 auto; 
-   text-align: center;
-}
-
- .test a {
-   
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  background-color: #555;
-  color: white;
-  font-size: 16px;
-  padding: 12px 24px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-
-}
-
-
-        .test img {
-            display: block;
-            margin: auto;
-
-        }
-
-.positioner{
-
-
-padding-top:25px;
-    position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  
-}
-
-.topnav-right{
-
-    float: right;
-   font-family: 'TradeGothicLTStd-BdCn20', Helvetica, Arial, sans-serif!important;
-   padding-top:30px;
-
-
-}
-
-.topnav-right a{
-
-display: inline-block;
-    background: transparent;
-    color: #ffffff;
-    font-family: 'TradeGothicLTStd-BdCn20', Helvetica, Arial, sans-serif;
-    font-size: 22px;
-    line-height: 24px;
-    padding: 6px 13px 0 13px
-}
-
-
-.headingList{
-
-
-
-    font-family: 'TradeGothicLTStd-BdCn20', Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    background: transparent;
-
-    line-height: 20px;
-    font-weight: 400;
-    color: #fff;
-    padding: 0 0 17px;
-    display: block;
-    font-weight: bold;
-
-
-}
-
-.listSub{
-    display: block;
-    position: relative;
-    padding-right: 22px;
-    font-size: 14px;
-    font-family: 'PublicSans', sans-serif!important;
-    background: transparent;
-    letter-spacing: 1px;
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    text-transform: none;
-    -webkit-transition: color 0.25s ease;
-    -moz-transition: color 0.25s ease;
-    -ms-transition: color 0.25s ease;
-    -o-transition: color 0.25s ease;
-    transition: color 0.25s ease;
-    line-height: 2.4rem;
-
-
-}
-
-
-
-    </style>
-
 </head>
 
 <body>
@@ -346,21 +43,14 @@ display: inline-block;
             <a href="https://www.albany.edu/">
                 <img class="ualbany-logo" src="assets/logos/logo.png" />
             </a>
-
             <div class="topnav-right">
                 <a href="https://www.albany.edu/myualbany">MYUALBANY</a>
                 <a href="https://www.albany.edu/apply-now">APPLY</a>
                 <a href="https://www.alumni.albany.edu/s/1642/18-giving/landing.aspx?sid=1642&gid=2&pgid=2040&appealcode=uahome">
                 GIVE</a>
-              </div>
+            </div>
         </div>
-
-
-
-
-
     </header>
-
     <div class="hh " id="navbarSupportedContent">
         <div class="row fo">
             <div class="col-md-3 coll">
@@ -393,15 +83,10 @@ display: inline-block;
                         <li>
                             Corporate ,Nonprofit and Public-Sector <br />Partners
                         </li>
-
                     </ul>
                 </div>
             </div>
-
             <div class="col-md-2 col2" style="padding-right: 0px;">
-
-
-
                 <ul>
                     <li>
                         About UAlbany
@@ -424,12 +109,8 @@ display: inline-block;
                     <li>
                         Financial Aid
                     </li>
-
-
                 </ul>
-
             </div>
-
             <div class="col-md-2 col2" style="padding-right: 0px;">
                 <div class="bor ">
                     <ul>
@@ -454,15 +135,7 @@ display: inline-block;
                     </ul>
                 </div>
             </div>
-
-
-
-
-
-
-
             <div class="col-md-1 col2">
-
                 <ul>
                     <li>
                         Calendars
@@ -479,15 +152,9 @@ display: inline-block;
                     <li>
                         IT Services
                     </li>
-
-
-
                 </ul>
-
             </div>
-
             <div class="col-md-1 col2">
-
                 <ul>
                     <li>
                         Events
@@ -504,43 +171,16 @@ display: inline-block;
                     <li>
                         Career Services
                     </li>
-
-
-
                 </ul>
-
             </div>
-
-
-
-
-
         </div>
-
-
-
-
-
-
-    </div>
-
-
-
-
-    </div>
     </div>
     <div class="test">
-       
-       
-        <img src="https://www.albany.edu/themes/albany_bootstrap_theme/images/menu-arrow.png" >
-        <button class="circle1" id="buttonatag" data-toggle="collapse" data-target="#navbarSupportedContent">
-
-        </a>
-        <div class="positioner">
-            <i class="fa fa-bars fa-2x icon1"></i>
-
-          </div>
-        </div>
+        <button id="buttonatag" data-toggle="collapse" data-target="#navbarSupportedContent" aria-expanded="false" class="collapsed">
+            MENU<br><i class="fa fa-bars"></i>
+        </button>
+    </div>
+    
 
 
 
@@ -726,43 +366,18 @@ display: inline-block;
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WNRD5G" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-
-
-
-
     <script>
-
-        $('#buttonatag').click(function () {
-            $(this).children("i").text(function (i, old) {
-                console.log("ss");
-                return old == 'Menu' ? 'Close' : 'Menu';
-            });
+          $('#buttonatag').click(function () {
+            let innerHTML = this.innerHTML;
+            if(innerHTML.includes('MENU') == true)
+            {
+                this.innerHTML = 'CLOSE<br><i class="fa fa-times"></i>';
+            }
+            else
+            {
+                this.innerHTML = 'MENU<br><i class="fa fa-bars"></i>';
+            }
         });
-
-
-       /*  $(document).ready(function() {
-  $('#link').on('click', function() {
-    change_login_button();
-  });
-});
-
-function change_login_button() {
-  var $el = $('#link');
-  var $el2 = $('#login span:last-child');
-  textNode = $("#login span:last-child").text();
-  $el.find('span.glyphicon').toggleClass('glyphicon-log-out glyphicon-log-in');
-  textNode = ($el.hasClass('showLogin') ? 'Logout' : 'Login');
-  $el2.text(textNode);
-  $el.toggleClass('showLogin');
-}
- */
-
-
-
-
     </script>
-
-
 </body>
-
 </html>
