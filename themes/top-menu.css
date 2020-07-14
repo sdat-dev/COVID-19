@@ -1,5 +1,14 @@
+.menu-header{
+position: fixed;
+z-index:99;
+width:100%;
+    
+}
+
+
+
 .bor {
-    margin-top: 10px;
+    margin-top: 1em;
     border-radius: 1px;
     -moz-border-radius: 1px;
     -webkit-border-radius: 1px;
@@ -7,7 +16,8 @@
     border-right: 1px solid #612b8a;
     border-right-width: 1px;
     border-right-style: solid;
-    border-right-color: rgb(97, 43, 138)
+    border-right-color: rgb(97, 43, 138);
+    margin-right:-30px;
 }
 
 .hh {
@@ -19,6 +29,7 @@
     border-top-width: 1px;
     border-top-style: solid;
     border-top-color: rgb(97, 43, 138);
+    width:100vw;
 }
 
 .fo {
@@ -35,17 +46,19 @@
 }
 
 .coll {
-    margin-left: 30px;
+    margin-left: 2%;
     display: block;
     list-style: none;
-    padding-left: 50px;
+    padding-left: 20px;
+    
 }
 
 .col2 {
     color: #fff;
-    margin-left: 10px;
+    margin-left: 3%;
     display: block;
-    margin-top: 7px;
+    margin-top: 0.8em;
+    margin-left:4%
 }
 
 .icon {
@@ -203,8 +216,11 @@
     color: #fff;
     padding: 0 0 17px;
     display: block;
-    font-weight: bold;
+    
+
 }
+
+
 
 .listSub {
     display: block;
@@ -230,6 +246,8 @@
     color: white;
 }
 
+
+
 .icon_new {
     display: block;
     margin: auto;
@@ -242,7 +260,7 @@
     margin: 0 auto;
     text-align: center;
     font-family: 'TradeGothicLTStd-BdCn20', Helvetica, Arial, sans-serif !important;
-    font-size: 20px;
+    font-size: 19px;
     line-height: 18px;
     background: transparent;
     width: 100%;
@@ -259,6 +277,7 @@
     width: 160px;
     height: 48px;
     border: none;
+    font-size:18px;
 }
 
 .test>button:focus {
@@ -266,3 +285,15 @@
     outline: none;
     color: white;
 }
+
+
+
+
+ul .listSub a:hover, ul .listSub a:focus {
+    color:white;
+   }
+
+   
+  .fa-facebook-f:hover{
+    color:yellow;
+  }

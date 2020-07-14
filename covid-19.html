@@ -43,6 +43,7 @@
             </div>
         </div>
     </header>
+    <div class="menu-header">
     <div class="hh collapse" id="navbarSupportedContent">
         <div class="row fo">
             <div class="col-md-3 coll">
@@ -51,7 +52,7 @@
                         <li class="headingList">
                             INFORMATION FOR
                         </li>
-                        <li class="listSub">
+                        <li id="test_list" class="listSub">
                             <a class="linkforlist" href="https://www.albany.edu/current-students">Current Students </a>
                         </li>
                         <li class="listSub">
@@ -82,7 +83,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-3 col2" style="padding-right: 0px;">
+            <div class="col-md-2.5 col2" style="padding-right: 0px;">
                 <ul>
                     <li class="headingList">
                         TOPICS
@@ -100,19 +101,25 @@
                         <a class="linkforlist" href="https://www.albany.edu/publicengagement/">Public Engagement</a>
                     </li>
                     <li class="listSub">
-                        <a class="linkforlist" href="https://www.albany.edu/schools-colleges-affiliations">Research</a>
+                        <a class="linkforlist" href="https://www.albany.edu/research-ualbany">Research</a>
                     </li>
                     <li class="listSub">
-                        <a class="linkforlist" href="">Schools, Colleges & Affiliations</a>
+                        <a class="linkforlist" href="https://www.albany.edu/schools-colleges-affiliations">Schools, Colleges & Affiliations</a>
                     </li>
                     <li class="listSub">
                         <a class="linkforlist" href="https://www.albany.edu/financialaid/">Financial Aid</a>
                     </li>
                 </ul>
             </div>
-            <div class="col-md-2 col2" style="padding-top: 24px;">
+            <div class="col-md-2 col1" style="margin-top: 1em;
+            margin-left: 4%;"
+        } >
                 <div class="bor ">
                     <ul>
+
+                        <li class="headingList">
+                           
+                        </li>
                         <li class="listSub">
                             <a class="linkforlist" href="https://www.albany.edu/international/"> International
                                 Education</a>
@@ -157,8 +164,11 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-md-1 " style="padding-top: 38px;">
+            <div class="col-md-1.5 " style="margin-top: 2em;">
                 <ul>
+                    <li class="headingList">
+                           
+                    </li>
                     <li class="listSub" style="margin-top: -5px; ">
                         <a class="linkforlist"
                             href="https://events.albany.edu/cal/main/showEventList.rdo;jsessionid=npziD_rxShBzkDjVTJfRzRIX5wtUC5BC3yieI27B.bede-svc-p101">Events</a>
@@ -181,8 +191,8 @@
         </div>
         <div class="d-flex justify-content-center">
             <div class=" p-2"> 
-                <a class="social" href="https://www.albany.edu/main/facebook.shtml">
-                    <i class="fab fa-facebook-f" style="font-size:24px; color:white"></i>
+                <a  href="https://www.albany.edu/main/facebook.shtml">
+                    <span class="fab fa-facebook-f" style="font-size:24px; color:white"></span>
                 </a>
             </div>
             <div class="p-2"> 
@@ -202,7 +212,7 @@
             </div>
             <div class="p-2"> 
                 <a href="https://www.albany.edu/main/youtube.shtml">
-                    <i class=" fab fa-youtube-play" style="font-size:24px; color:white"></i>
+                    <i class=" fab fa-youtube"  style="font-size:24px; color:white"></i>
                 </a>
             </div>
             <div class="p-2"> 
@@ -211,13 +221,20 @@
                 </a>
             </div>
         </div>
+
+
+
+       
+
     </div>
     <div class="test">
-        <button id="buttonatag" data-toggle="collapse" data-target="#navbarSupportedContent" aria-expanded="false"
-            class="collapsed">
+        <button id="buttonatag" data-toggle="collapse" data-target=".hh" aria-expanded="false"
+        aria-controls=".hh" aria-label="Toggle navigation" class="collapsed">
             MENU<br><i class="fa fa-bars"></i>
         </button>
     </div>
+      </div>
+
     <div class = "landing-page-image-wrapper">
         <div id = "landing-page-text-wrapper">
             <h1>COVID-19</h1>
@@ -367,6 +384,7 @@
             <p>© 2019&nbsp;University at Albany</p>
         </section>
     </footer>
+   
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WNRD5G" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
@@ -377,12 +395,40 @@
         $('#buttonatag').click(function () {
             let innerHTML = this.innerHTML;
             if (innerHTML.includes('MENU') == true) {
-                this.innerHTML = 'CLOSE<br><i class="fa fa-times"></i>';
+                this.innerHTML = 'CLOSE<br><i  class="fa fa-times"></i>';
             }
             else {
-                this.innerHTML = 'MENU<br><i class="fa fa-bars"></i>';
+                this.innerHTML = 'MENU<br><i  class="fa fa-bars"></i>';
             }
         });
+
+        $('.test #buttonatag fa-bars').click(function () {
+            let innerHTML = this.innerHTML;
+            if (innerHTML.includes('MENU') == true) {
+                this.innerHTML = 'CLOSE<br><i  class="fa fa-times"></i>';
+            }
+            else {
+                this.innerHTML = 'MENU<br><i  class="fa fa-bars"></i>';
+            }
+        });
+
+
+     
+
+
+ $(document).ready(function () {
+    $(document).click(function (event) {
+        var click = $(event.target);
+        var _open = $(".hh").hasClass("show");
+        if (_open === true && !click.hasClass("collapsed")) {
+            $("#buttonatag").click();
+        }
+    });
+});
+ 
+
+
+
     </script>
     <script>$('#navbarSupportedContent').collapse('hide')</script>
 </body>
