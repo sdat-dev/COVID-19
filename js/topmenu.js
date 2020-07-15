@@ -120,3 +120,34 @@ let addTopMenu = function(){
                             '</div>';
     megamenu.innerHTML = megemenuContent;
 }
+
+addTopMenu();
+
+$('#buttonatag').click(function () {
+    let innerHTML = this.innerHTML;
+    if (innerHTML.includes('MENU') == true) {
+        this.innerHTML = 'CLOSE<br><i  class="fa fa-times"></i>';
+    }
+    else {
+        this.innerHTML = 'MENU<br><i  class="fa fa-bars"></i>';
+    }
+});
+$('.test #buttonatag fa-bars').click(function () {
+    let innerHTML = this.innerHTML;
+    if (innerHTML.includes('MENU') == true) {
+        this.innerHTML = 'CLOSE<br><i  class="fa fa-times"></i>';
+    }
+    else {
+        this.innerHTML = 'MENU<br><i  class="fa fa-bars"></i>';
+    }
+});
+$(document).ready(function () {
+    $(document).click(function (event) {
+        var click = $(event.target);
+        var _open = $(".hh").hasClass("show");
+        if (_open === true && !click.hasClass("collapsed")) {
+            $("#buttonatag").click();
+        }
+    });
+});
+$('#navbarSupportedContent').collapse('hide');

@@ -157,37 +157,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="libraries/bootstrap/js/bootstrap.min.js"></script>
     <script src="js/topmenu.js"></script>
-    <script>
-        addTopMenu();
-        $('#buttonatag').click(function () {
-            let innerHTML = this.innerHTML;
-            if (innerHTML.includes('MENU') == true) {
-                this.innerHTML = 'CLOSE<br><i  class="fa fa-times"></i>';
-            }
-            else {
-                this.innerHTML = 'MENU<br><i  class="fa fa-bars"></i>';
-            }
-        });
-        $('.test #buttonatag fa-bars').click(function () {
-            let innerHTML = this.innerHTML;
-            if (innerHTML.includes('MENU') == true) {
-                this.innerHTML = 'CLOSE<br><i  class="fa fa-times"></i>';
-            }
-            else {
-                this.innerHTML = 'MENU<br><i  class="fa fa-bars"></i>';
-            }
-        });
-        $(document).ready(function () {
-            $(document).click(function (event) {
-                var click = $(event.target);
-                var _open = $(".hh").hasClass("show");
-                if (_open === true && !click.hasClass("collapsed")) {
-                    $("#buttonatag").click();
-                }
-            });
-        });
-        $('#navbarSupportedContent').collapse('hide');
-    </script>
 </body>
 
 </html>
