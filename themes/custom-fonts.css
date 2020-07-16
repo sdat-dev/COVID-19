@@ -14,5 +14,8 @@ Primary use:    Custom fonts for Cyber-AI Website
 
 @font-face {
     font-family: 'PublicSans';
-    src: url('../assets/fonts/public-sans.regular.ttf');
-}
+    src: 
+         url('https://www.albany.edu/communicationsmarketing/assets/fonts/publicsans/PublicSans-ExtraLight.woff2') format('woff2'), /* Super Modern Browsers */
+         url('https://www.albany.edu/communicationsmarketing/assets/fonts/publicsans/PublicSans-ExtraLight.woff') format('woff'), /* Pretty Modern Browsers */
+         url('https://www.albany.edu/communicationsmarketing/assets/fonts/publicsans/PublicSans-ExtraLight.ttf')  format('truetype'); /* Safari, Android, iOS */
+  }
