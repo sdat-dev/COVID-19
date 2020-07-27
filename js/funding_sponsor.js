@@ -141,7 +141,7 @@ if(distinctCategories[k] == 'NSF'){
     if(distinctCategories[k] == 'NIH'){
         length = NIH_arr.length;
         arr=NIH_arr;
-        img_url="assets/logos/nih.png";
+        img_url="assets/logos/NIH.png";
     
         
     }
