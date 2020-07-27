@@ -312,7 +312,9 @@
 
 
                     if (programs_value.spon_name.includes(distinctCategories[k]) ||
-                        programs_value.spon_name.includes('National Science Foundation')) {
+                        programs_value.spon_name.includes('National Science Foundation') ||
+                        programs_value.spon_name === "Directorate for Engineering/NSF"
+                        ) {
                         NSF_arr.push(programs_value);
 
                     }
