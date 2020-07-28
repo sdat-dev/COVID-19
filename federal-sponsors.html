@@ -295,14 +295,13 @@
                 var arr = [];
                 for (var j = 0; j < covid_data.Programs.length; j++) {
                     var programs_value = covid_data.Programs[j];
-                    console.log("*********");
-                    console.log(programs_value.synopsis);
-                    console.log(programs_value.spon_name);
+                    //console.log("*********");
+                    //console.log(programs_value.synopsis);
+                    //console.log(programs_value.spon_name);
+                    //console.log(programs_value.NextDeadlineDate);
+                    //console.log(programs_value.total_funding_limit);
 
-                    console.log(programs_value.NextDeadlineDate);
-                    console.log(programs_value.total_funding_limit);
-
-                    console.log(programs_value.programurl);
+                    //console.log(programs_value.programurl);
 
                     /* if(programs_value.spon_name.includes(distinctCategories[k])){
                         arr.push( programs_value);
@@ -474,7 +473,7 @@
 
 
 
-               
+
 
 
 
@@ -536,33 +535,33 @@
                 if (funding_name === 'Federal - Others') {
 
                     if (image_name === "cfgh" ||
-                    image_name === "cdc") {
+                        image_name === "cdc") {
                         img_url = "assets/logos-funding-opportunities/cdc.png";
 
                     }
 
-                   else if (image_name === "dotaf" ||
-                    image_name === "dota" ||
-                    image_name === "dla" ||
-                    image_name === "dova" ||
-                    image_name === "dohs" 
+                    else if (image_name === "dotaf" ||
+                        image_name === "dota" ||
+                        image_name === "dla" ||
+                        image_name === "dova" ||
+                        image_name === "dohs"
                     ) {
                         img_url = "assets/logos-funding-opportunities/dod.png";
 
                     }
-                    
 
-                    
-                   else if (image_name === "niofaadoa"
+
+
+                    else if (image_name === "niofaadoa"
                         || image_name === "arsdoa"
                     ) {
 
 
-                        img_url = "assets/logos-funding-opportunities/"+image_name+".png";
+                        img_url = "assets/logos-funding-opportunities/" + image_name + ".png";
                     }
-                    else{
+                    else {
 
-                        img_url = "assets/logos-funding-opportunities/"+image_name+".png";
+                        img_url = "assets/logos-funding-opportunities/" + image_name + ".png";
 
                     }
 
@@ -581,33 +580,18 @@
                     var url_image = "assets/logos-funding-opportunities/" + image_name + ".png";
                     var image = new Image(url_image);
 
-                   // image.src = url_image;
-                   // if (image.width == 0) {
-                     // 
-
-                    
-
-                
-                   // } else {
-                                            
-
-                                            if(checkFileExists(url_image)){
-                                                img_url = url_image;
-                                            }
-                                                else{
-                                                img_url = "assets/logos-funding-opportunities/SPIN_logo.png";
-                                                console.log("ddd");
-                                                }
 
 
-                   // }
+                    if (checkFileExists(url_image)) {
+                        img_url = url_image;
+                    }
+                    else {
+                        img_url = "assets/logos-funding-opportunities/SPIN_logo.png";
+                       // console.log("ddd");
+                    }
 
 
-
-
-                    
-
-
+                    // }
 
                 }
 
@@ -677,7 +661,7 @@
         let getImageName = function (sponser_name) {
 
 
-            if(sponser_name.split(" ").length == 1){
+            if (sponser_name.split(" ").length == 1) {
                 return sponser_name;
             }
             var matches = sponser_name.match(/\b(\w)/g);
@@ -685,17 +669,17 @@
         }
 
 
-            let checkFileExists =function(url){
-                var xhr = new XMLHttpRequest();
-                xhr.open('HEAD', url, false);
-                xhr.send();
-     
+        let checkFileExists = function (url) {
+            var xhr = new XMLHttpRequest();
+            xhr.open('HEAD', url, false);
+            xhr.send();
+
             if (xhr.status == "404") {
-                 return false;
+                return false;
             } else {
-             return true;
-             }
+                return true;
             }
+        }
 
 
         var parseData = function (p) {
