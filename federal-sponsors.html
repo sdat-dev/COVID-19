@@ -314,7 +314,7 @@
                     if (programs_value.spon_name.includes(distinctCategories[k]) ||
                         programs_value.spon_name.includes('National Science Foundation') ||
                         programs_value.spon_name === "Directorate for Engineering/NSF"
-                        ) {
+                    ) {
                         NSF_arr.push(programs_value);
 
                     }
@@ -441,6 +441,7 @@
             let content = '';
             var today = new Date();
             var flag = false;
+            var flag_defunct = true;
 
 
             for (let i = 0; i < arr.length; i++) {
@@ -461,7 +462,7 @@
 
                     }
                 } else {
-                    dueDate = "Contact the Program Officer"
+                    dueDate = "Continuous Submission/Contact the Program Officer"
                     flag = true;
                 }
 
@@ -473,8 +474,11 @@
 
 
 
+               
 
-                if (funding_name === 'Federal - Others') {
+
+
+                /* if (funding_name === 'Federal - Others') {
 
                     if (arr[i].spon_name.includes("Center for Global Health") ||
                         arr[i].spon_name.includes("CDC")) {
@@ -518,6 +522,50 @@
                         img_url = "assets/logos/USDA+National+Institute+of+Food+and+Ag_thumb.png";
                     }
 
+                   
+
+                }
+
+
+
+ */
+
+                var image_name = getImageName(arr[i].spon_name).toLowerCase();
+
+
+                if (funding_name === 'Federal - Others') {
+
+                    if (image_name === "cfgh" ||
+                    image_name === "cdc") {
+                        img_url = "assets/logos-funding-opportunities/cdc.png";
+
+                    }
+
+                   else if (image_name === "dotaf" ||
+                    image_name === "dota" ||
+                    image_name === "dla" ||
+                    image_name === "dova" ||
+                    image_name === "dohs" 
+                    ) {
+                        img_url = "assets/logos-funding-opportunities/dod.png";
+
+                    }
+                    
+
+                    
+                   else if (image_name === "niofaadoa"
+                        || image_name === "arsdoa"
+                    ) {
+
+
+                        img_url = "assets/logos-funding-opportunities/"+image_name+".png";
+                    }
+                    else{
+
+                        img_url = "assets/logos-funding-opportunities/"+image_name+".png";
+
+                    }
+
 
 
                 }
@@ -525,18 +573,39 @@
 
 
 
+
                 if (funding_name === 'Others') {
 
-                    if (arr[i].spon_name === "SUNY Research Seed Grant Program") {
 
 
-                        img_url = "assets/logos/SUNY-logo.png";
-                    }
+                    var url_image = "assets/logos-funding-opportunities/" + image_name + ".png";
+                    var image = new Image(url_image);
 
-                    if (arr[i].spon_name.includes("Defunct")) {
-                        flag = false;
-                    }
+                   // image.src = url_image;
+                   // if (image.width == 0) {
+                     // 
 
+                    
+
+                
+                   // } else {
+                                            
+
+                                            if(checkFileExists(url_image)){
+                                                img_url = url_image;
+                                            }
+                                                else{
+                                                img_url = "assets/logos-funding-opportunities/SPIN_logo.png";
+                                                console.log("ddd");
+                                                }
+
+
+                   // }
+
+
+
+
+                    
 
 
 
@@ -562,7 +631,7 @@
                 //if(dueDate == "Contact the Officier"  || dueDate >= today )
                 //{
 
-                if (dueDate != "Contact the Program Officer") {
+                if (dueDate != "Continuous Submission/Contact the Program Officer") {
                     if (dueDate > today) {
                         flag = true;
                         dueDate = deadlineDate;
@@ -605,7 +674,28 @@
 
 
 
+        let getImageName = function (sponser_name) {
 
+
+            if(sponser_name.split(" ").length == 1){
+                return sponser_name;
+            }
+            var matches = sponser_name.match(/\b(\w)/g);
+            return matches.join('');
+        }
+
+
+            let checkFileExists =function(url){
+                var xhr = new XMLHttpRequest();
+                xhr.open('HEAD', url, false);
+                xhr.send();
+     
+            if (xhr.status == "404") {
+                 return false;
+            } else {
+             return true;
+             }
+            }
 
 
         var parseData = function (p) {
