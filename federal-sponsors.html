@@ -284,12 +284,13 @@
             let categoryCounter = 1;
 
 
-            var NSF_arr = [];
+          
+            for (var k = 0; k < distinctCategories.length; k++) {
+                var NSF_arr = [];
             var NIH_arr = [];
             var federal_arr = [];
 
             var others = [];
-            for (var k = 0; k < distinctCategories.length; k++) {
                 var length = 0;
                 var img_url = "";
                 var arr = [];
@@ -309,8 +310,8 @@
 
 
 
-
-                    if (programs_value.spon_name.includes(distinctCategories[k]) ||
+                    
+                    if (programs_value.spon_name.includes('NSF') ||
                         programs_value.spon_name.includes('National Science Foundation') ||
                         programs_value.spon_name === "Directorate for Engineering/NSF"
                     ) {
@@ -324,7 +325,7 @@
                     else if (programs_value.spon_name.includes('NIH') ||
                         programs_value.spon_name.includes('National Institutes of Health/DHHS')
                         || programs_value.spon_name.includes('National Institute of Health')
-
+                         && !NIH_arr.includes(programs_value)
 
                     ) {
                         NIH_arr.push(programs_value);
@@ -344,9 +345,9 @@
 
                     else {
                         if (distinctCategories[k] == 'Others') {
-                            if (programs_value.sponsor_type != 'US Federal' ||
+                            if (programs_value.sponsor_type != 'US Federal' &&
 
-                                !federal_arr.includes(programs_value)
+                                !federal_arr.includes(programs_value) 
                             ) {
 
                                 others.push(programs_value);
@@ -616,8 +617,8 @@
                 //{
 
                 if (dueDate != "Continuous Submission/Contact the Program Officer") {
-                    if (dueDate > today) {
-                        flag = true;
+                   if (dueDate > today) {
+                      flag = true;
                         dueDate = deadlineDate;
                     }
                 }
@@ -625,7 +626,7 @@
 
 
 
-                if (flag) {
+              //  if (flag) {
                     let imageElement = (arr[i].logo == '') ? '' : '<div class = "col-xl-2 col-lg-3"><img class = "agency-logo" src = "' + img_url + '" /></div>';
                     content = content + '<div class = "display-flex opportunity-container search-container">' + imageElement +
                         '<div class = "col-xl-10 col-lg-9">' + '<h4 class = "opp-header black-content-header-no-margin">' + arr[i].prog_title + '</h4>' + '<div class = "opp-details display-flex">' +
@@ -641,7 +642,7 @@
                         '<p class = "opp-description">' + description + '</p>' +
                         '<button type = "button" class = "details-button" onclick = "location.href = \'' + arr[i].programurl + '\'">View Details</button></div>';
                     // }     
-                }
+               // }
             }
             return content;
         }
