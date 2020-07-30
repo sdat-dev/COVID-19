@@ -286,7 +286,7 @@
 
           
             for (var k = 0; k < distinctCategories.length; k++) {
-                var NSF_arr = [];
+                  var NSF_arr = [];
             var NIH_arr = [];
             var federal_arr = [];
 
@@ -323,9 +323,9 @@
 
 
                     else if (programs_value.spon_name.includes('NIH') ||
-                        programs_value.spon_name.includes('National Institutes of Health/DHHS')
+                       programs_value.spon_name.includes('DHHS')
                         || programs_value.spon_name.includes('National Institute of Health')
-                         && !NIH_arr.includes(programs_value)
+                         && !NIH_arr.includes(programs_value) 
 
                     ) {
                         NIH_arr.push(programs_value);
@@ -336,7 +336,7 @@
 
                     else if (distinctCategories[k] == 'Federal - Others') {
                         if (programs_value.sponsor_type == 'US Federal' && !programs_value.spon_name.includes('DHHS') &&
-                            !programs_value.spon_name.includes('NIH')) {
+                            !programs_value.spon_name.includes('NIH') && !programs_value.spon_name.includes('NSF')     ) {
                             federal_arr.push(programs_value);
                         }
 
@@ -347,7 +347,7 @@
                         if (distinctCategories[k] == 'Others') {
                             if (programs_value.sponsor_type != 'US Federal' &&
 
-                                !federal_arr.includes(programs_value) 
+                                !federal_arr.includes(programs_value)  && !NIH_arr.includes(programs_value)
                             ) {
 
                                 others.push(programs_value);
