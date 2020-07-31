@@ -142,8 +142,17 @@
                 <input id="search-box" placeholder="Search for funding opportunities"><button id="search-button"
                     type="submit"><i class="fa fa-search"></i></button>
                 <br><span id="search-box-results">
+                    <div class="preload" style="position:absolute; width:100%; 
+                    height:100%;"><img style=" margin-left: auto;
+                margin-right: auto;
+                display: block;" src='assets/images/loader.gif'>
+                    </div>
+
                 </span>
+
+
             </div>
+
         </div>
     </section>
     <footer id="footer">
@@ -225,11 +234,30 @@
     <script src="js/topmenu.js"></script>
     <script src="js/common.js"></script>
     <!--  <script src = "js/opportunity.js"></script> -->
-    <!-- <script src = "js/funding_sponsor.js"></script> -->
-
-
+    <script src="js/fundingSponsor.js"></script>
 
     <script>
+        $(document).ready(function () {
+            $.getScript("js/fundingSponsor.js");
+
+        });
+
+
+        $(window).on("load", function () {
+
+            $(function () {
+                $(".preload").fadeOut(1000, function () {
+                    $("#accordionExample").fadeIn(800);
+                });
+            });
+
+        });
+
+    </script>
+
+
+
+    <!--   <script>
 
         $(document).ready(function () {
 
@@ -296,21 +324,7 @@
                 var arr = [];
                 for (var j = 0; j < covid_data.Programs.length; j++) {
                     var programs_value = covid_data.Programs[j];
-                    //console.log("*********");
-                    //console.log(programs_value.synopsis);
-                    //console.log(programs_value.spon_name);
-                    //console.log(programs_value.NextDeadlineDate);
-                    //console.log(programs_value.total_funding_limit);
-
-                    //console.log(programs_value.programurl);
-
-                    /* if(programs_value.spon_name.includes(distinctCategories[k])){
-                        arr.push( programs_value);
-                    } */
-
-
-
-                    
+                  
                     if (programs_value.spon_name.includes('NSF') ||
                         programs_value.spon_name.includes('National Science Foundation') ||
                         programs_value.spon_name === "Directorate for Engineering/NSF"
@@ -319,11 +333,8 @@
 
                     }
 
-
-
-
                     else if (programs_value.spon_name.includes('NIH') ||
-                       programs_value.spon_name.includes('DHHS')
+                       programs_value.spon_name.includes('DHHS')    
                         || programs_value.spon_name.includes('National Institute of Health')
                          && !NIH_arr.includes(programs_value) 
 
@@ -361,10 +372,6 @@
 
 
                 }
-
-
-
-
 
                 if (distinctCategories[k] == 'NSF') {
                     length = NSF_arr.length;
@@ -405,29 +412,8 @@
 
 
 
-
-
-
             }
 
-
-
-
-
-
-            /* for (var i = 0; i < covid_data.Programs.length; i++) {
-                var programs_value = covid_data.Programs[i];
-                
-            let categoryHeader = distinctCategories[k] + ' (' + arr.length + ' Solicitations)';
-            let accordionContent = generateFederalAccordionContent(arr);
-            let oppId = "collapse" + categoryCounter;
-            let headingId = "heading" + categoryCounter;
-            let accordionElem =  generateAccordionElement(oppId, headingId, categoryHeader, accordionContent);
-            content = content ;
-            categoryCounter++;
-            
-            
-            } */
 
             appendMainContent(maincontentContainer, content);
 
@@ -701,7 +687,7 @@
 
 
 
-    </script>
+    </script> -->
     <script src="js/search-box.js"></script>
 </body>
 
