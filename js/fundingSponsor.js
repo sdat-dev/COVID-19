@@ -27,18 +27,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 function getAccordiationData(p) {
     let maincontentContainer = document.getElementsByClassName('main-content')[0];
 
@@ -192,7 +180,7 @@ let generateFederalAccordionContent = function (arr, img_url, funding_name) {
         if (arr[i].total_funding_limit === 0) {
             Estimated_Funding = "N/A";
         } else {
-            Estimated_Funding = arr[i].total_funding_limit;
+            Estimated_Funding = '$' + arr[i].total_funding_limit;
         }
 
 
