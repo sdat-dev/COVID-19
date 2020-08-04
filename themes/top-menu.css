@@ -272,7 +272,7 @@ width:100%;
 }
 
 .test>button {
-    background-image: url("https://www.albany.edu/themes/albany_bootstrap_theme/images/menu-arrow.png");
+    background-image: url("https://www.albany.edu/themes/custom/albany_bootstrap_theme/images/menu-arrow.png");
     color: #eeb211;
     width: 160px;
     height: 47px;
@@ -296,4 +296,53 @@ ul .listSub a:hover, ul .listSub a:focus {
    
    .fa-facebook-f:hover{
     color:yellow;
+  }
+
+
+
+
+.btn {
+    background: none;
+    border: none;
+    outline: none;
+  }
+  
+  
+  .mainSearch {
+      
+      position: relative;
+      padding-right:12px;
+    
+  }
+  
+  .hidden{
+      display:none;
+  }
+  
+  .inlineDisplay{
+      display:inline-block;
+  }
+  
+  .searchInput {
+      background-color: white;
+      color: #000;
+  
+      padding-right: 0;
+      width: 200px;
+      padding-left: 10px;
+      height: 25px;
+      border-radius: 0 !important;
+  
+  }
+  
+  .submitButton {
+      background: #edba32;
+      height: 25px;
+      margin-top: 15px;
+      color: #46166C;
+      line-height: 21px;
+      right: 15px;
+      padding-left: 10px;
+      padding-right:10px
+  
   }

@@ -10,8 +10,22 @@ let addTopMenu = function(){
                                 '<a href="https://www.albany.edu/myualbany">MYUALBANY</a>'+
                                 '<a href="https://www.albany.edu/apply-now">APPLY</a>'+
                                 '<a href="https://www.alumni.albany.edu/s/1642/18-giving/landing.aspx?sid=1642&gid=2&pgid=2040&appealcode=uahome">'+
-                                '   GIVE</a>'+    
+                                '   GIVE</a>'+ 
+                                '<button type="button" class="btn" id="search-toggle">'+
+                                '<span class="fa fa-search"></i>'+
+                                '</button>'+
+    
+                       
+                                '<form class="mainSearch hidden">'+
+                                '<button type="button" class="btn" id="times-button">'+
+                                '<span class="fa fa-times"></i>'+
+                                '</button>'+
+                               
+                                '<input class="searchInput" id="textInput" type="text"><input class="submitButton" value="Search" type="submit" onclick="getValue()">'+
+                                '</form>'   +
                             '</div>'+
+
+                            
                         '</div>';
     navheader.innerHTML = headerContent;
 
@@ -157,5 +171,43 @@ $(document).ready(function () {
             $("#buttonatag").click();
         }
     });
+
+
+
+    $('#search-toggle').click(function() {
+        $('.mainSearch').removeClass('hidden');
+        $('.mainSearch').addClass('inlineDisplay');
+        $('.search-button').addClass('hidden');
+        $('#search-toggle').addClass('hidden');
+  
+      });
+     
+  
+      $('#times-button').click(function() {
+        $('.mainSearch').addClass('hidden');
+        $('.mainSearch').removeClass('inlineDisplay');
+        $('.search-button').removeClass('hidden');
+        $('#search-toggle').removeClass('hidden');
+  
+  
+      });
+     
+
+
 });
 $('#navbarSupportedContent').collapse('hide');
+
+
+
+function getValue() {
+    var text_input = document.getElementById('textInput').value;
+    console.log(text_input);
+
+  if(text_input === ""){
+      window.open("https://www.albany.edu/search/search_results.php?cx=009452333206896616693%3Aabbjmkl5yry&cof=FORID%3A11&ie=UTF-8&sa.x=0&sa.y=0&sa=Search&siteurl=www.albany.edu%2F&ref=www.google.com%2F&ss=233j24671j6&q=");
+  
+  }else{
+    window.open("https://www.albany.edu/search/search_results.php?cx=009452333206896616693%3Aabbjmkl5yry&cof=FORID%3A11&ie=UTF-8&sa.x=0&sa.y=0&sa=Search&siteurl=www.albany.edu%2F&ref=www.google.com%2F&ss=233j24671j6&q="+text_input);
+  }
+  }
+  
