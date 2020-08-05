@@ -299,14 +299,36 @@ ul .listSub a:hover, ul .listSub a:focus {
   }
 
 
-
+/* search  button*/
 
 .btn {
     background: none;
     border: none;
     outline: none;
+    color:white;
   }
   
+
+
+
+.fa-search:hover{
+  
+    color:#eeb211;
+   
+  }
+
+
+
+.fa-times:hover{
+  
+    color:#eeb211;
+   
+  }
+
+
+  .btn:hover{
+    color:#eeb211;
+  }
   
   .mainSearch {
       
@@ -325,7 +347,7 @@ ul .listSub a:hover, ul .listSub a:focus {
   
   .searchInput {
       background-color: white;
-      color: #000;
+      
   
       padding-right: 0;
       width: 200px;
@@ -336,10 +358,10 @@ ul .listSub a:hover, ul .listSub a:focus {
   }
   
   .submitButton {
-      background: #edba32;
+      background: #eeb211;
       height: 25px;
       margin-top: 15px;
-      color: #46166C;
+      color: white;
       line-height: 21px;
       right: 15px;
       padding-left: 10px;
