@@ -6,10 +6,11 @@
         keywords: '[SOLR]keyword_exact:"Coronavirus/COVID-19" AND NOT keyword_exact:"COVID-19 Non-Research Resources"',
         responseFormat: 'JSONP',
         pageSize: 1000,
-        columns: ["synopsis", "id", "spon_name", "NextDeadlineDate", "total_funding_limit", "programurl", "sponsor_type", "prog_title", "    "],
+        columns: ["synopsis", "id", "spon_name", "NextDeadlineDate", "total_funding_limit", "programurl", "sponsor_type", "prog_title", "established_date","revision_date"],
         uniqueId: '3AF9322F-EA4D-48DF-9',
         isCrossDomain: true,
-        callback: 'parseData'
+        callback: 'parseData',
+       
 
     };
 
@@ -153,6 +154,22 @@ let generateFederalAccordionContent = function (arr, img_url, funding_name) {
     var today = new Date();
     var flag = false;
     var flag_defunct = true;
+
+
+
+   /*  const sortedActivities = arr.sort((a, b) => b.established_date - a.established_date);
+    console.log(sortedActivities);
+    const sorted1 = arr.sort((a, b) => a.revision_date - b.revision_date);
+    console.log(sorted1);
+ */
+
+
+
+arr.sort(function(a, b) {
+    var c = new Date(a.revision_date);
+    var d = new Date(b.revision_date);
+    return d-c;
+});
 
 
     for (let i = 0; i < arr.length; i++) {
