@@ -306,9 +306,13 @@ ul .listSub a:hover, ul .listSub a:focus {
     border: none;
     outline: none;
     color:white;
+    box-shadow: none;
   }
   
+.btn :focus{
 
+    outline:0;
+}
 
 
 .fa-search:hover{
@@ -334,16 +338,25 @@ ul .listSub a:hover, ul .listSub a:focus {
       
       position: relative;
       padding-right:12px;
+      width:auto;
     
-  }
+}
+     
+
+
   
   .hidden{
       display:none;
+      
+    
+      
   }
   
-  .inlineDisplay{
+   .inlineDisplay{
       display:inline-block;
-  }
+     
+     
+  } 
   
   .searchInput {
       background-color: white;
@@ -354,12 +367,14 @@ ul .listSub a:hover, ul .listSub a:focus {
       padding-left: 10px;
       height: 25px;
       border-radius: 0 !important;
+
+     
   
   }
   
   .submitButton {
       background: #eeb211;
-      height: 25px;
+      height: 26px;
       margin-top: 15px;
       color: white;
       line-height: 21px;
@@ -367,4 +382,8 @@ ul .listSub a:hover, ul .listSub a:focus {
       padding-left: 10px;
       padding-right:10px
   
+  }
+
+  .marginChange {
+    margin-right:-305px;
   }
