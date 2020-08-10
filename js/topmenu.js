@@ -206,7 +206,7 @@ var flag=false;
 
 $('#search-toggle').one('click', function() {
 
-    $(".mainSearch").animate({ "margin-right":  "0px" },500);    
+    $(".mainSearch").animate({ "margin-right":  "0px" },300);    
     flag=true;
 });
 
