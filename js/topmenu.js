@@ -11,17 +11,17 @@ let addTopMenu = function(){
                                 '<a href="https://www.albany.edu/apply-now">APPLY</a>'+
                                 '<a href="https://www.alumni.albany.edu/s/1642/18-giving/landing.aspx?sid=1642&gid=2&pgid=2040&appealcode=uahome">'+
                                 '   GIVE</a>'+ 
-                                '<button type="button" class="btn" id="search-toggle">'+
+                                '<button type="button" style="padding-left:25px;padding-right:15px;" class="btn" id="search-toggle">'+
                                 '<span class="fa fa-search"></i>'+
                                 '</button>'+
     
                        
                                 '<span class="mainSearch" style="margin-right:-307px; display:inline-block;">'+
-                                '<button type="button" class="btn" id="times-button">'+
+                                '<button type="button" style="padding-left:25px;padding-right:15px;" class="btn" id="times-button">'+
                                 '<span class="fa fa-times"></i>'+
                                 '</button>'+
                                
-                                '<input  style="vertical-align:middle;" class="searchInput" id="textInput" type="text"><input class="submitButton" style="vertical-align:inherit;" value="Search" type="submit" onclick="getValue()">'+
+                                '<input  style="vertical-align:middle;" class="searchInput" id="textInput" type="text"><input class="submitButton" value="Search" type="submit" onclick="getValue()">'+
                                 '</span>'   +
                             '</div>'+
 
@@ -206,7 +206,7 @@ var flag=false;
 
 $('#search-toggle').one('click', function() {
 
-    $(".mainSearch").animate({ "margin-right":  "0px" },300);    
+    $(".mainSearch").animate({ "margin-right":  "0px" },500);    
     flag=true;
 });
 

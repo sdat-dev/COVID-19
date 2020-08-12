@@ -193,7 +193,11 @@ width:100%;
 .topnav-right {
     float: right;
     font-family: 'TradeGothicLTStd-BdCn20', Helvetica, Arial, sans-serif !important;
-    padding-top: 30px;
+    padding-top: 24px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start
 }
 
 .topnav-right a {
@@ -203,7 +207,9 @@ width:100%;
     font-family: 'TradeGothicLTStd-BdCn20', Helvetica, Arial, sans-serif;
     font-size: 22px;
     line-height: 24px;
-    padding: 6px 13px 0 13px
+    padding: 6px 13px 0 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 
@@ -337,7 +343,7 @@ ul .listSub a:hover, ul .listSub a:focus {
   .mainSearch {
       
       position: relative;
-      padding-right:12px;
+      padding-right:20px;
       width:auto;
     
 }
@@ -363,10 +369,11 @@ ul .listSub a:hover, ul .listSub a:focus {
       
   
       padding-right: 0;
-      width: 200px;
-      padding-left: 10px;
+     width: 200px;
+        padding-left: 10px;
       height: 25px;
       border-radius: 0 !important;
+      vertical-align: middle;
 
      
   
@@ -375,15 +382,25 @@ ul .listSub a:hover, ul .listSub a:focus {
   .submitButton {
       background: #eeb211;
       height: 26px;
-      margin-top: 15px;
-      color: white;
+      color:#46166b;
       line-height: 21px;
       right: 15px;
       padding-left: 10px;
-      padding-right:10px
+      padding-right:10px;
+
+      vertical-align: middle;
+      padding-bottom: 0px;
+      margin-top: 0px;
   
   }
 
   .marginChange {
     margin-right:-305px;
   }
+
+
+
+  .topnav-right a:hover {
+    color:#edba32;
+    text-decoration: none;
+}
