@@ -12,12 +12,13 @@ let addTopMenu = function(){
                                 '<a href="https://www.alumni.albany.edu/s/1642/18-giving/landing.aspx?sid=1642&gid=2&pgid=2040&appealcode=uahome">'+
                                 '   GIVE</a>'+ 
                                 '<button type="button" style="padding-left:25px;padding-right:15px;" class="btn" id="search-toggle">'+
+                                '<button type="button" style="padding-left:25px;padding-right:15px;" class="btn1" id="search-toggle">'+
                                 '<span class="fa fa-search"></i>'+
                                 '</button>'+
     
                        
                                 '<span class="mainSearch" style="margin-right:-307px; display:inline-block;">'+
-                                '<button type="button" style="padding-left:25px;padding-right:15px;" class="btn" id="times-button">'+
+                                '<button type="button" style="padding-left:25px;padding-right:15px;" class="btn1" id="times-button">'+
                                 '<span class="fa fa-times"></i>'+
                                 '</button>'+
                                
@@ -227,6 +228,7 @@ $('#search-toggle').click(function() {
    //  $('.mainSearch').toggle("slide");   
      
    $(".mainSearch").animate({ "margin-right":  "0px" },500); 
+   
    }
    
    });
