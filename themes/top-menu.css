@@ -310,9 +310,9 @@ ul .listSub a:hover, ul .listSub a:focus {
 .btn1 {
     background: none;
     border: none;
-    outline: none;
+    outline: none !important;
     color:white;
-    box-shadow: none;
+    box-shadow: none !important; 
   }
   
 .btn1 :focus{
