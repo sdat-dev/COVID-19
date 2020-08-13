@@ -307,18 +307,18 @@ ul .listSub a:hover, ul .listSub a:focus {
 
 /* search  button*/
 
-.btn1 {
+.btn {
     background: none;
     border: none;
-    outline: none  !important;
+    outline: none;
     color:white;
-    box-shadow: none  !important;
+    box-shadow: none;
   }
   
-.btn1 :focus{
+.btn :focus{
 
-    outline:0 !important;
-    box-shadow: none !important;
+    outline:0;
+    box-shadow: none; 
 }
 
 
@@ -337,7 +337,7 @@ ul .listSub a:hover, ul .listSub a:focus {
   }
 
 
-  .btn1:hover{
+  .btn:hover{
     color:#eeb211;
   }
   

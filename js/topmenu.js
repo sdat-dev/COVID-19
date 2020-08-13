@@ -18,7 +18,7 @@ let addTopMenu = function(){
     
                        
                                 '<span class="mainSearch" style="margin-right:-307px; display:inline-block;">'+
-                                '<button type="button" style="padding-left:25px;padding-right:15px;" class="btn1" id="times-button">'+
+                                '<button type="button" style="padding-left:25px;padding-right:15px;" class="btn" id="times-button">'+
                                 '<span class="fa fa-times"></i>'+
                                 '</button>'+
                                
@@ -228,7 +228,6 @@ $('#search-toggle').click(function() {
    //  $('.mainSearch').toggle("slide");   
      
    $(".mainSearch").animate({ "margin-right":  "0px" },500); 
-   
    }
    
    });
