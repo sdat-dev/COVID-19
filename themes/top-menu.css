@@ -318,6 +318,7 @@ ul .listSub a:hover, ul .listSub a:focus {
 .btn :focus{
 
     outline:0;
+    box-shadow: none;
 }
 
 
