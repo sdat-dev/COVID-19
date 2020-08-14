@@ -93,35 +93,35 @@ let addTopMenu = function(){
                                         '</ul>'+
                                     '</div>'+
                                 '</div>'+
-                                '<div class="d-flex justify-content-center">'+
+                                '<div class="d-flex justify-content-center" style="height:55px">'+
                                     '<div class=" p-2">'+ 
                                         '<a  href="https://www.albany.edu/main/facebook.shtml">'+
-                                            '<span class="fab fa-facebook-f" style="font-size:24px; color:white"></span>'+
+                                            '<span class="fab fa-facebook-f" style="font-size:22px; color:white"></span>'+
                                         '</a>'+
                                     '</div>'+
                                     '<div class="p-2">'+ 
                                         '<a href="https://www.albany.edu/main/twitter.shtml">'+
-                                            '<i class="fab fa-twitter" style="font-size:24px;color:white"></i>'+
+                                            '<i class="fab fa-twitter" style="font-size:22px;color:white"></i>'+
                                         '</a>'+
                                     '</div>'+
                                     '<div class="p-2">'+ 
                                         '<a href="https://www.instagram.com/ualbany/">'+
-                                            '<i class="fab fa-instagram" style="font-size:24px; color:white"></i>'+
+                                            '<i class="fab fa-instagram" style="font-size:22px; color:white"></i>'+
                                         '</a>'+
                                     '</div>'+
                                     '<div class="p-2">'+ 
                                         '<a href="https://www.snapchat.com/add/ualbany">'+
-                                            '<i class=" fab fa-snapchat" style="font-size:24px; color:white"></i>'+
+                                            '<i class=" fab fa-snapchat" style="font-size:22px; color:white"></i>'+
                                         '</a>'+
                                     '</div>'+
                                     '<div class="p-2">'+ 
                                         '<a href="https://www.albany.edu/main/youtube.shtml">'+
-                                            '<i class=" fab fa-youtube"  style="font-size:24px; color:white"></i>'+
+                                            '<i class=" fab fa-youtube"  style="font-size:22px; color:white"></i>'+
                                         '</a>'+
                                     '</div>'+
                                     '<div class="p-2">'+ 
                                         '<a href="https://www.albany.edu/main/linkedin.shtml">'+
-                                            '<i class="  fab fa-linkedin" style="font-size:24px; color:white"></i>'+
+                                            '<i class="  fab fa-linkedin" style="font-size:22px; color:white"></i>'+
                                         '</a>'+
                                     '</div>'+
                                 '</div>'+
@@ -206,7 +206,7 @@ var flag=false;
 
 $('#search-toggle').one('click', function() {
 
-    $(".mainSearch").animate({ "margin-right":  "0px" },500);    
+    $(".mainSearch").animate({ "margin-right":  "0px" },300);    
     flag=true;
 });
 
@@ -226,7 +226,7 @@ $('#search-toggle').click(function() {
    // $(".mainSearch").animate({marginRight: "-300px"}, 500 );
    //  $('.mainSearch').toggle("slide");   
      
-   $(".mainSearch").animate({ "margin-right":  "0px" },500); 
+   $(".mainSearch").animate({ "margin-right":  "0px" },300); 
    }
    
    });
@@ -236,13 +236,13 @@ $('#search-toggle').click(function() {
    //  $('.mainSearch').addClass('hidden');
      //$('.mainSearch').removeClass('inlineDisplay');
     // $('.search-button').removeClass('hidden');
-$('#search-toggle').removeClass('hidden');
 
    //  $('.mainSearch').toggle("slide", { direction: "right" }, 1000);
 
 
-   $(".mainSearch").animate({ "margin-right":  "-307px" },500); 
-   
+   $(".mainSearch").animate({ "margin-right":  "-307px" },300); 
+   $('#search-toggle').removeClass('hidden');
+
 
    // $('.mainSearch').hide('slow');   
 
