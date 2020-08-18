@@ -11,7 +11,7 @@ let addTopMenu = function(){
                                 '<a href="https://www.albany.edu/apply-now">APPLY</a>'+
                                 '<a href="https://www.alumni.albany.edu/s/1642/18-giving/landing.aspx?sid=1642&gid=2&pgid=2040&appealcode=uahome">'+
                                 '   GIVE</a>'+ 
-                                '<button type="button" style="padding-left:25px;padding-right:15px;" class="btn1" id="search-toggle">'+
+                                /* '<button type="button" style="padding-left:25px;padding-right:15px;" class="btn1" id="search-toggle">'+
                                 '<span class="fa fa-search"></i>'+
                                 '</button>'+
     
@@ -19,11 +19,34 @@ let addTopMenu = function(){
                                 '<span class="mainSearch" style="margin-right:-307px; display:inline-block;">'+
                                 '<button type="button" style="padding-left:25px;padding-right:15px;" class="btn1" id="times-button">'+
                                 '<span class="fa fa-times"></i>'+
-                                '</button>'+
+                                '</button>'+ */
+                                '</div>'+
+                                
+
+
+                                '<div class="searchTop"  style="display:inline">' +
+                               ' <form class="searchbox"  > '+
+                               '<button type="button" style="padding-left:25px;padding-right:15px;" class="btn1" id="search-toggle">'+
+                               '<span class="fa fa-search" style="line-height: 50px; font-size: 20px;"></i>'+
+                               '</button>'+
+
+                               '<button type="button" style="padding-left:25px;padding-right:15px;" class="btn1 hidden11 " id="times-button">'+
+                               '<span class="fa fa-times" style="line-height: 50px; font-size: 20px;"></i>'+
+                               '</button>'+
+                                '<input  type="search" style=" width:0px; height:0px; margin-left:20px;" class="searchbox-input" id="textInput" >'+
+                               '<input class="submitButton"  style=" width:0px; height:0px; margin-bottom:5px;" value="Search" type="submit" onclick="getValue()">'+
+
+
                                
-                                '<input  style="vertical-align:middle;" class="searchInput" id="textInput" type="text"><input class="submitButton" value="Search" type="submit" onclick="getValue()">'+
-                                '</span>'   +
+                            '</form>' +
                             '</div>'+
+                                    
+
+                               
+
+
+
+                              
 
                             
                         '</div>';
@@ -204,59 +227,106 @@ var flag=false;
  */
 
 
-$('#search-toggle').one('click', function() {
+    var submitIcon = $('#search-toggle');
+    var inputBox = $('.searchbox-input');
+    var searchBox = $('.searchbox');
+    var isOpen = false;
+    submitIcon.click(function(){
+       // if(isOpen == false){
+           
+          // searchBox.removeClass('hidden');
+          $(".topnav-right").animate({ "margin-left":  "416px" },"fast");    
 
-    $(".mainSearch").animate({ "margin-right":  "0px" },300);    
-    flag=true;
+         
+          searchBox.addClass('searchbox-open');
+
+
+            $('#search-toggle').addClass('hidden11');
+            $('#times-button').removeClass('hidden11');
+
+
+          $('.searchTop').css("display","inline");
+
+
+
+        
+          
+
+         
+         
+          setTimeout(showpanel, 300);
+
+
+           
+           // isOpen = true;
+      //  } else {
+           
+           
+           // isOpen = false;
+       // }
+    });  
+     
+    function showpanel(){
+        $('.searchbox-input').css("width","200px");  
+        $('.searchbox-input').css("height","25px");
+
+
+        $('.submitButton').css("width","90px");  
+        $('.submitButton').css("height","25px");
+    }
+
+
+    $('#times-button').click(function() {
+        //  $('.mainSearch').addClass('hidden');
+          //$('.mainSearch').removeClass('inlineDisplay');
+
+
+        
+          $(".searchBox").toggleClass('hide');
+        //  $('.searchTop').css("display","none");
+          $('.searchbox-input').css("width","0px");  
+          $('.searchbox-input').css("height","0px");
+          $('.submitButton').css("width","0px");  
+        $('.submitButton').css("height","0px");
+
+      // searchBox.css("display","none");
+
+       
+          $('#search-toggle').removeClass('hidden11');
+          $('#times-button').addClass('hidden11');
+
+          searchBox.removeClass('searchbox-open');
+
+          $(".topnav-right").animate({ "margin-left":  "730px" },"fast");    
+
+  
+          
+  
+        });
+
+     
+
+
 });
 
 
 
-
-$('#search-toggle').click(function() {
-   //$('.mainSearch').removeClass('hidden');
-   if(flag){
-    $('.mainSearch').addClass('inlineDisplay');
-    // $('.search-button').addClass('hidden');
-     $('#search-toggle').addClass('hidden');
-
-
-    //$('.mainSearch').toggle("slide", { direction: "left" }, 5000);
-
-   // $(".mainSearch").animate({marginRight: "-300px"}, 500 );
-   //  $('.mainSearch').toggle("slide");   
-     
-   $(".mainSearch").animate({ "margin-right":  "0px" },300); 
-   }
-   
-   });
-  
-
-   $('#times-button').click(function() {
-   //  $('.mainSearch').addClass('hidden');
-     //$('.mainSearch').removeClass('inlineDisplay');
-    // $('.search-button').removeClass('hidden');
-
-   //  $('.mainSearch').toggle("slide", { direction: "right" }, 1000);
-
-
-   $(".mainSearch").animate({ "margin-right":  "-307px" },300); 
-   $('#search-toggle').removeClass('hidden');
-
-
-   // $('.mainSearch').hide('slow');   
-
-   });
+function buttonUp(){
+    var inputVal = $('.searchbox-input').val();
+    inputVal = $.trim(inputVal).length;
+    if( inputVal !== 0){
+        $('.searchbox-icon').css('display','none');
+    } else {
+        $('.searchbox-input').val('');
+        $('.searchbox-icon').css('display','block');
+    }
+}
 
 
 
 
-     
-  
-     
 
 
-});
 $('#navbarSupportedContent').collapse('hide');
 
 

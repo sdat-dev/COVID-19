@@ -191,13 +191,15 @@ width:100%;
 }
 
 .topnav-right {
-    float: right;
+    
     font-family: 'TradeGothicLTStd-BdCn20', Helvetica, Arial, sans-serif !important;
     padding-top: 26px;
-    display: flex;
+    display: inline-block;
     align-items: center;
     flex-wrap: wrap;
-    justify-content: flex-start
+    justify-content: flex-start;
+
+    margin-left: 730px;
 }
 
 .topnav-right a {
@@ -372,11 +374,9 @@ ul .listSub a:hover, ul .listSub a:focus {
 
 
   
-  .hidden{
+  .hidden11{
       display:none;
-      
     
-      
   }
   
    .inlineDisplay{
@@ -401,13 +401,16 @@ ul .listSub a:hover, ul .listSub a:focus {
   }
   
   .submitButton {
-      background: #eeb211;
-      height: 26px;
+      background: #edba32;
+      height: 25px;
       color:#46166b;
-      line-height: 21px;
       right: 15px;
       padding-left: 10px;
       padding-right:10px;
+      width:90px;
+      font-family: 'TradeGothicLTStd-BdCn20', Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 30px;
 
       vertical-align: middle;
       padding-bottom: 0px;
@@ -424,4 +427,77 @@ ul .listSub a:hover, ul .listSub a:focus {
   .topnav-right a:hover {
     color:#edba32;
     text-decoration: none;
+}
+
+
+/*************/
+
+
+
+
+.searchbox{
+    position:relative;
+    min-width: 0px;
+    display: contents;
+    width:0%;
+    height:50px;
+    float:right;
+    overflow:hidden;
+    
+    -webkit-transition: width 0.3s;
+    -moz-transition: width 0.3s;
+    -ms-transition: width 0.3s;
+    -o-transition: width 0.3s;
+    transition: width 0.3s;
+}
+
+.searchbox-input{
+    top:0;
+    right:0;
+    border:0;
+    outline:0;
+    background-color: white;
+      
+    width:200px;
+    height:25px;
+    margin:0;
+    padding:0px 55px 0px 20px;
+    font-size:20px;
+   
+}
+
+
+.searchbox-icon,
+.searchbox-submit{
+    width:50px;
+    height:50px;
+    top:0;
+    font-family:verdana;
+    font-size:22px;
+    
+    padding-left:20px;
+    margin:0;
+    border:0;
+    outline:0;
+    line-height:50px;
+    text-align:center;
+    cursor:pointer;
+    color:#FFFFFF;
+    }
+
+.searchbox-open{
+    width:100%;
+}
+
+
+#searchTop{
+
+    /* box-sizing: border-box;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    width: 320px;
+    position: relative; */
+    width:0%;
 }
