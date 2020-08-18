@@ -196,35 +196,7 @@ $(document).ready(function () {
     });
 
 
-var flag=false;
-   /*  $('#search-toggle').click(function() {
-       //$('.mainSearch').removeClass('hidden');
-        $('.mainSearch').addClass('inlineDisplay');
-        $('.search-button').addClass('hidden');
-        $('#search-toggle').addClass('hidden');
-
-
-       //$('.mainSearch').toggle("slide", { direction: "left" }, 5000);
-
-
-        $('.mainSearch').show('slow');   
-            
-  
-      });
-     
-  
-      $('#times-button').click(function() {
-      //  $('.mainSearch').addClass('hidden');
-        //$('.mainSearch').removeClass('inlineDisplay');
-        $('.search-button').removeClass('hidden');
-        $('#search-toggle').removeClass('hidden');
-
-      //  $('.mainSearch').toggle("slide", { direction: "right" }, 1000);
-
-        $('.mainSearch').hide('slow');   
-
-      });
- */
+   
 
 
     var submitIcon = $('#search-toggle');
@@ -232,38 +204,17 @@ var flag=false;
     var searchBox = $('.searchbox');
     var isOpen = false;
     submitIcon.click(function(){
-       // if(isOpen == false){
-           
-          // searchBox.removeClass('hidden');
-          $(".topnav-right").animate({ "margin-left":  "416px" },"fast");    
+       
+           $(".topnav-right").animate({ "margin-left":  "416px" },"fast");    
 
          
-          searchBox.addClass('searchbox-open');
+            searchBox.addClass('searchbox-open');
 
 
             $('#search-toggle').addClass('hidden11');
             $('#times-button').removeClass('hidden11');
-
-
-          $('.searchTop').css("display","inline");
-
-
-
-        
-          
-
-         
-         
-          setTimeout(showpanel, 300);
-
-
-           
-           // isOpen = true;
-      //  } else {
-           
-           
-           // isOpen = false;
-       // }
+            $('.searchTop').css("display","inline");
+            setTimeout(showpanel, 200);
     });  
      
     function showpanel(){
@@ -277,21 +228,12 @@ var flag=false;
 
 
     $('#times-button').click(function() {
-        //  $('.mainSearch').addClass('hidden');
-          //$('.mainSearch').removeClass('inlineDisplay');
-
-
-        
+       
           $(".searchBox").toggleClass('hide');
-        //  $('.searchTop').css("display","none");
           $('.searchbox-input').css("width","0px");  
           $('.searchbox-input').css("height","0px");
           $('.submitButton').css("width","0px");  
-        $('.submitButton').css("height","0px");
-
-      // searchBox.css("display","none");
-
-       
+          $('.submitButton').css("height","0px");
           $('#search-toggle').removeClass('hidden11');
           $('#times-button').addClass('hidden11');
 
