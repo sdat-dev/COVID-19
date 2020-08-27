@@ -53,6 +53,28 @@ Primary use:    Common.css file used for styling header, footer and
     border-radius: 1%;
 }
 
+#custom-button{
+    width: 315px;
+    margin-left: 243px;
+    height: 54px;
+    color: white;
+    background-color: #46166C;
+    padding: 9px;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'News Cycle', Helvetica, Arial, sans-serif;
+    margin-top: 20px;
+    border-radius: 1%;
+
+
+}
+
+#custom-button > a{
+    color: inherit;
+    text-decoration: none;
+}
+
+
 #social-media-button > a{
     color: inherit;
     text-decoration: none;
