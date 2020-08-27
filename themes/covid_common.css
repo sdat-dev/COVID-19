@@ -54,7 +54,8 @@ Primary use:    Common.css file used for styling header, footer and
 }
 
 #custom-button{
-    width: 315px;
+    display: inline-block;
+    text-align: center;
     margin-left: 243px;
     height: 54px;
     color: white;
