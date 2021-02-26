@@ -38,7 +38,7 @@ let addTopHeader = function () {
                                     '<li><a href="http://library.albany.edu/">Libraries</a></li>'+
                                 '</ul>'+
                             '</li>'+
-                            '<li><a href="https://www.albany.edu/admissions">Admissions <span class="appear">&amp; Aid </span></a>'+
+                            '<li><a href="https://www.albany.edu/admissions">Admissions &amp; Aid<span class="appear"></span></a>'+
                                 '<ul>'+
                                     '<li><a href="https://www.albany.edu/admissions-undergraduate">Freshman</a></li>'+
                                     '<li><a href="https://www.albany.edu/admissions-transfer">Transfer</a></li>'+

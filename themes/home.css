@@ -6,6 +6,7 @@ Primary use:    home.css file used for styling home page
 .home-logo{
     width: 120px;
     margin-bottom: 10px;
+    height: 120px;
     transition: all .15s ease-in-out;
 }
 
@@ -29,12 +30,11 @@ Primary use:    home.css file used for styling home page
 
 .home-logo-container > p{
     color: #46166C;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 .main-content {
     color: #444;
-    font-size: 22px;
     font-family: 'PublicSans', sans-serif!important;;
     line-height: 26px;
     padding-bottom: 30px;

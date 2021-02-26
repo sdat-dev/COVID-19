@@ -513,7 +513,7 @@ a:hover {
 @media only screen and (min-width: 1192px) {
     .landing-page-image-wrapper {
         background-image: url('../assets/logos/covid-19-logo-xl.png');
-        height: 30.6vw;
+        height: 40.6vw;
     }
     #landing-page-text-wrapper
     {
@@ -554,3 +554,4 @@ a:hover {
     padding-left: 0px;
     padding-right: 0px;
 }
+

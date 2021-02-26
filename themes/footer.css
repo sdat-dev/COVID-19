@@ -109,6 +109,10 @@ footer.footer .footer-new a, footer.footer .footer-new p {
     padding-left: 15px
 }
 
+.margin-zero{
+    margin: 0 0 0px !important;
+}
+
 @media (min-width:768px) {
     .col-sm-offset-0 {
         margin-left: 18%;
