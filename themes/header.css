@@ -322,7 +322,7 @@ body {
 }
 
 
-.region-content p a, .region-below-content p a, .region-above-content p a, footer.footer a {
+/* .region-content p a, .region-below-content p a, .region-above-content p a, footer.footer a {
     background-image: linear-gradient(120deg, #edba32 0%, #edba32 100%);
     background-repeat: no-repeat;
     background-size: 100% 0.2em;
@@ -334,7 +334,7 @@ body {
 .region-content p a:hover, .region-below-content p a:hover, .region-above-content p a:hover, footer.footer a:hover {
     background-size: 105% 105%;
     cursor: pointer;
-}
+} */
 
 @media only screen and (min-width :768px) {
     #navbar .menu-burger, #navbar img#albany-logo-mobile {
@@ -663,7 +663,7 @@ body {
     }
 }
 
-.navbar a, a:hover{
+.navbar a:hover{
     color: #46166b;
     text-decoration: none;
     font-family: PublicSans;
