@@ -9,7 +9,7 @@ var data = {
     isCrossDomain: true,
     callback: 'parseData',
     keywords: '[SOLR]keyword_exact:"Coronavirus/COVID-19" AND NOT keyword_exact:"COVID-19 Non-Research Resources"',
-    uniqueId: '6E7E0477-B8D4-404F-B'
+    // uniqueId: '6E7E0477-B8D4-404F-B'
 
 };
 
@@ -150,11 +150,14 @@ for (let i = 0; i < arr.length; i++) {
         dueDate = "Continuous Submission/Contact the Program Officer"
         flag = true;
     }
-
+    var formatter = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+    });
     if (arr[i].total_funding_limit === 0) {
         Estimated_Funding = "N/A";
     } else {
-        Estimated_Funding = '$' + arr[i].total_funding_limit;
+        Estimated_Funding = formatter.format(arr[i].total_funding_limit);
     }
 
     var image_name = getImageName(arr[i].spon_name).toLowerCase();
@@ -209,6 +212,7 @@ for (let i = 0; i < arr.length; i++) {
             dueDate = deadlineDate;
         }
     }
+
     let imageElement = (arr[i].logo == '') ? '' : '<div class = "col-xl-2 col-lg-3"><img class = "agency-logo" src = "' + img_url + '" /></div>';
     content = content + '<div class = "display-flex opportunity-container search-container">' + imageElement +
         '<div class = "col-xl-10 col-lg-9">' + '<h4 class = "opp-header black-content-header-no-margin">' + arr[i].prog_title + '</h4>' + '<div class = "opp-details display-flex">' +
