@@ -137,12 +137,12 @@ for (let i = 0; i < arr.length; i++) {
     if (arr[i].NextDeadlineDate != null) {
 
         if (arr[i].NextDeadlineDate.length <= 11) {
-            dueDate = new Date(arr[i].NextDeadlineDate);
+            dueDate = arr[i].NextDeadlineDate;
             deadlineDate = new Date(arr[i].NextDeadlineDate).toLocaleDateString();
         }
         else {
             var dateArr = arr[i].NextDeadlineDate.split(" ");
-            dueDate = new Date(dateArr[0]);
+            dueDate = arr[i].NextDeadlineDate.substring(1,11);
             deadlineDate = new Date(dateArr[0]).toLocaleDateString();
 
         }
