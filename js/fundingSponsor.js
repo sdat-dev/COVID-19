@@ -5,7 +5,7 @@ var data = {
     signature: "97707afe4847b9862f27c9ce80a9cb6e",
     responseFormat: 'JSONP',
     pageSize: 3000,
-    columns: ["synopsis", "id", "spon_name", "NextDeadlineDate", "total_funding_limit", "programurl", "sponsor_type", "prog_title", "revision_date"],
+    columns: ["synopsis", "id", "spon_name", "NextDeadlineDate", "total_funding_limit", "programurl", "sponsor_type", "prog_title", "revision_date", "deadline_note"],
     isCrossDomain: true,
     callback: 'parseData',
     keywords: '[SOLR]keyword_exact:"Coronavirus/COVID-19" AND NOT keyword_exact:"COVID-19 Non-Research Resources"',
@@ -138,13 +138,12 @@ for (let i = 0; i < arr.length; i++) {
 
         if (arr[i].NextDeadlineDate.length <= 11) {
             dueDate = new Date(arr[i].NextDeadlineDate);
-            deadlineDate = new Date(arr[i].NextDeadlineDate).toLocaleDateString();
+            deadlineDate = new Date(arr[i].NextDeadlineDate)
         }
         else {
             var dateArr = arr[i].NextDeadlineDate.split(" ");
             dueDate = new Date(dateArr[0]);
-            deadlineDate = new Date(dateArr[0]).toLocaleDateString();
-
+            deadlineDate = new Date(dateArr[0]);
         }
     } else {
         dueDate = "Continuous Submission/Contact the Program Officer"
@@ -223,9 +222,10 @@ for (let i = 0; i < arr.length; i++) {
         '<i class="fas fa-dollar-sign"></i> <strong>Estimated Funding: </strong>' + Estimated_Funding +
         '<br>' +
         '</div><div class = "col-sm-12 col-md-12 col-lg-12 col-xl-6">' +
-        '<i class="fas fa-calendar-day"></i> <strong>Due Date: </strong>' + dueDate  +
+        '<i class="fas fa-calendar-day"></i> <strong>Due Date: </strong>' + dueDate.toDateString()  +
         '<br></div></div></div>' +
         '<p class = "opp-description">' + description + '</p>' +
+        '<p><i class="fas fa-calendar-day"></i> <strong>Due Date Note: </strong>' + arr[i].deadline_note  + '</p>'+
         '<button type = "button" class = "details-button" onclick = "location.href = \'' + arr[i].programurl + '\'">View Details</button></div>';
 }
 return content;
