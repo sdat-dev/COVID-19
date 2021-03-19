@@ -120,8 +120,6 @@ appendMainContent(maincontentContainer, content);
 let generateFederalAccordionContent = function (arr, img_url, funding_name) {
 let content = '';
 var today = new Date();
-var flag = false;
-var flag_defunct = true;
 
 arr.sort(function(a, b) {
     var c = new Date(a.revision_date);
@@ -130,24 +128,19 @@ arr.sort(function(a, b) {
 });
 
 for (let i = 0; i < arr.length; i++) {
-    flag = false;
     var dueDate = "";
-    var deadlineDate = "";
     var Estimated_Funding = "";
     if (arr[i].NextDeadlineDate != null) {
 
         if (arr[i].NextDeadlineDate.length <= 11) {
-            dueDate = new Date(arr[i].NextDeadlineDate);
-            deadlineDate = new Date(arr[i].NextDeadlineDate)
+            dueDate = arr[i].NextDeadlineDate;
         }
         else {
             var dateArr = arr[i].NextDeadlineDate.split(" ");
-            dueDate = new Date(dateArr[0]);
-            deadlineDate = new Date(dateArr[0]);
+            dueDate = arr[i].NextDeadlineDate.substring(1,11);
         }
     } else {
         dueDate = "Continuous Submission/Contact the Program Officer"
-        flag = true;
     }
     var formatter = new Intl.NumberFormat('en-US', {
         style: 'currency',
@@ -205,12 +198,6 @@ for (let i = 0; i < arr.length; i++) {
         }
     }
     var description = arr[i].synopsis.replace(/<[^>]*>/g, '');
-    if (dueDate != "Continuous Submission/Contact the Program Officer") {
-       if (dueDate > today) {
-          flag = true;
-            dueDate = deadlineDate;
-        }
-    }
 
     let imageElement = (arr[i].logo == '') ? '' : '<div class = "col-xl-2 col-lg-3"><img class = "agency-logo" src = "' + img_url + '" /></div>';
     content = content + '<div class = "display-flex opportunity-container search-container">' + imageElement +
@@ -222,11 +209,14 @@ for (let i = 0; i < arr.length; i++) {
         '<i class="fas fa-dollar-sign"></i> <strong>Estimated Funding: </strong>' + Estimated_Funding +
         '<br>' +
         '</div><div class = "col-sm-12 col-md-12 col-lg-12 col-xl-6">' +
-        '<i class="fas fa-calendar-day"></i> <strong>Due Date: </strong>' + dueDate.toDateString()  +
+        '<i class="fas fa-calendar-day"></i> <strong>Due Date: </strong>' + dueDate  +
         '<br></div></div></div>' +
-        '<p class = "opp-description">' + description + '</p>' +
-        '<p><i class="fas fa-calendar-day"></i> <strong>Due Date Note: </strong>' + arr[i].deadline_note  + '</p>'+
-        '<button type = "button" class = "details-button" onclick = "location.href = \'' + arr[i].programurl + '\'">View Details</button></div>';
+        '<p class = "opp-description">' + description + '</p>';
+        if(arr[i].deadline_note != null)
+        {
+            content += '<p><i class="fas fa-calendar-day"></i> <strong>Due Date Note: </strong>' + arr[i].deadline_note  + '</p>';
+        }
+        content += '<button type = "button" class = "details-button" onclick = "location.href = \'' + arr[i].programurl + '\'">View Details</button></div>';
 }
 return content;
 }
