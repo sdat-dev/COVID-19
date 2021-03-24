@@ -5,7 +5,7 @@ var data = {
     signature: "97707afe4847b9862f27c9ce80a9cb6e",
     responseFormat: 'JSONP',
     pageSize: 3000,
-    columns: ["synopsis", "id", "spon_name", "NextDeadlineDate", "total_funding_limit", "programurl", "sponsor_type", "prog_title", "revision_date"],
+    columns: ["synopsis", "id", "spon_name", "NextDeadlineDate", "total_funding_limit", "programurl", "sponsor_type", "prog_title", "revision_date", "deadline_note"],
     isCrossDomain: true,
     callback: 'parseData',
     keywords: '[SOLR]keyword_exact:"Coronavirus/COVID-19" AND NOT keyword_exact:"COVID-19 Non-Research Resources"',
@@ -120,8 +120,6 @@ appendMainContent(maincontentContainer, content);
 let generateFederalAccordionContent = function (arr, img_url, funding_name) {
 let content = '';
 var today = new Date();
-var flag = false;
-var flag_defunct = true;
 
 arr.sort(function(a, b) {
     var c = new Date(a.revision_date);
@@ -130,25 +128,19 @@ arr.sort(function(a, b) {
 });
 
 for (let i = 0; i < arr.length; i++) {
-    flag = false;
     var dueDate = "";
-    var deadlineDate = "";
     var Estimated_Funding = "";
     if (arr[i].NextDeadlineDate != null) {
 
         if (arr[i].NextDeadlineDate.length <= 11) {
             dueDate = arr[i].NextDeadlineDate;
-            deadlineDate = new Date(arr[i].NextDeadlineDate).toLocaleDateString();
         }
         else {
             var dateArr = arr[i].NextDeadlineDate.split(" ");
             dueDate = arr[i].NextDeadlineDate.substring(1,11);
-            deadlineDate = new Date(dateArr[0]).toLocaleDateString();
-
         }
     } else {
         dueDate = "Continuous Submission/Contact the Program Officer"
-        flag = true;
     }
     var formatter = new Intl.NumberFormat('en-US', {
         style: 'currency',
@@ -206,12 +198,6 @@ for (let i = 0; i < arr.length; i++) {
         }
     }
     var description = arr[i].synopsis.replace(/<[^>]*>/g, '');
-    if (dueDate != "Continuous Submission/Contact the Program Officer") {
-       if (dueDate > today) {
-          flag = true;
-            dueDate = deadlineDate;
-        }
-    }
 
     let imageElement = (arr[i].logo == '') ? '' : '<div class = "col-xl-2 col-lg-3"><img class = "agency-logo" src = "' + img_url + '" /></div>';
     content = content + '<div class = "display-flex opportunity-container search-container">' + imageElement +
@@ -225,8 +211,12 @@ for (let i = 0; i < arr.length; i++) {
         '</div><div class = "col-sm-12 col-md-12 col-lg-12 col-xl-6">' +
         '<i class="fas fa-calendar-day"></i> <strong>Due Date: </strong>' + dueDate  +
         '<br></div></div></div>' +
-        '<p class = "opp-description">' + description + '</p>' +
-        '<button type = "button" class = "details-button" onclick = "location.href = \'' + arr[i].programurl + '\'">View Details</button></div>';
+        '<p class = "opp-description">' + description + '</p>';
+        if(arr[i].deadline_note != null)
+        {
+            content += '<p><i class="fas fa-calendar-day"></i> <strong>Due Date Note: </strong>' + arr[i].deadline_note  + '</p>';
+        }
+        content += '<button type = "button" class = "details-button" onclick = "location.href = \'' + arr[i].programurl + '\'">View Details</button></div>';
 }
 return content;
 }
