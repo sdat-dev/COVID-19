@@ -15,7 +15,7 @@ searchfunction = function()
     {
         for(let i = 0; i< cardElems.length; i++)
         {
-            cardElems[i].style.display = "none";
+            cardElems[i].style.cssText = 'display:none !important';
         }
     }
 
@@ -23,7 +23,7 @@ searchfunction = function()
     {
         for(let i = 0; i< accordionContainers.length; i++)
         {
-            accordionContainers[i].style.display = "none";
+            accordionContainers[i].style.cssText = 'display:none !important';
         }
     }
 
@@ -68,7 +68,7 @@ searchfunction = function()
             else
             {
                 //If text doesn't match searchElement's display is toggled to none
-                searchElems[i].style.display = "none";
+                searchElems[i].style.cssText = 'display:none !important';
             }           
         }
         document.getElementById('search-box-results').innerText = "Showing "+ matchcount+ " results for: "+ searchtext;
@@ -91,7 +91,7 @@ searchfunction = function()
                 //When user clears search, toggling state of each individual group content
                 for(let i = 0; i< accordionContent.length; i++)
                 {
-                    accordionContent[i].style.display = "none";
+                    accordionContent[i].style.cssText = 'display:none !important';
                 }
             }
             else if(cardElems.length > 0)
