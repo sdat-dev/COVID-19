@@ -235,11 +235,27 @@ for (let i = 0; i < arr.length; i++) {
         '<p class = "opp-description">' + description + '</p>';
         if(arr[i].deadline_note != null)
         {
-            content += '<p><i class="fas fa-calendar-day"></i> <strong>Due Date Note: </strong>' + arr[i].deadline_note  + '</p>';
+            content += buildduedatenote(arr[i].deadline_note);
         }
-        content += '<button type = "button" class = "details-button" onclick = "location.href = \'' + arr[i].programurl + '\'">View Details</button></div>';
+        content += '<p class="width100"><button type = "button" class = "details-button" onclick = "location.href = \'' + arr[i].programurl + '\'">View Details</button></p></div>';
 }
 return content;
+}
+
+let counter = 1;
+let buildduedatenote = function(deadlinenote){
+    let content = "";
+    content = '<p class="mav-header">'+
+                '<button class="btn btn-mav details-button collapsed" type="button" data-toggle="collapse" data-target="#deadlinenote'+ counter +'" aria-expanded="false" aria-controls="deadlinenote'+ counter +'">Due Date Note '+
+                '<i class="fas fa-chevron-up"></i></button>'+
+              '</p>'+
+              '<div class="collapse" id="deadlinenote'+ counter +'">'+
+                '<div class="card card-body">'+
+                    deadlinenote +
+                '</div>'+
+              '</div>';
+    counter++;
+    return content;
 }
 
 let generateAccordionElement = function (divId, bootlabelId, accordionHeader, accordionContent) {
