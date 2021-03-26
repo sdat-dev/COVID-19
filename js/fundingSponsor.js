@@ -122,9 +122,30 @@ let content = '';
 var today = new Date();
 
 arr.sort(function(a, b) {
-    var c = new Date(a.revision_date);
-    var d = new Date(b.revision_date);
-    return d-c;
+    var deadlineDate_a = new Date();
+    var deadlineDate_b = new Date();
+    if (a.NextDeadlineDate != null) {
+
+        if (a.NextDeadlineDate.length <= 11) {
+            deadlineDate_a = new Date(a.NextDeadlineDate);
+        }
+        else {
+            var dateArr = a.NextDeadlineDate.split(" ");
+            deadlineDate_a = new Date(dateArr[0]);
+        }
+    }
+
+    if (b.NextDeadlineDate != null) {
+
+        if (b.NextDeadlineDate.length <= 11) {
+            deadlineDate_b = new Date(b.NextDeadlineDate);
+        }
+        else {
+            var dateArr = b.NextDeadlineDate.split(" ");
+            deadlineDate_b = new Date(dateArr[0]);
+        }
+    }   
+    return deadlineDate_a-deadlineDate_b;
 });
 
 for (let i = 0; i < arr.length; i++) {
