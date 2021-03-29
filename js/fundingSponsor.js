@@ -124,25 +124,28 @@ var today = new Date();
 arr.sort(function(a, b) {
     var deadlineDate_a = new Date();
     var deadlineDate_b = new Date();
+    var datestr = ' ';
     if (a.NextDeadlineDate != null) {
-
         if (a.NextDeadlineDate.length <= 11) {
-            deadlineDate_a = new Date(a.NextDeadlineDate);
+            datestr = a.NextDeadlineDate;
+            deadlineDate_a = new Date(replaceAll(datestr, "-"," "));
         }
         else {
             var dateArr = a.NextDeadlineDate.split(" ");
-            deadlineDate_a = new Date(dateArr[0]);
+            datestr = dateArr[0];
+            deadlineDate_a = new Date(replaceAll(datestr, "-"," "));
         }
     }
 
     if (b.NextDeadlineDate != null) {
-
         if (b.NextDeadlineDate.length <= 11) {
-            deadlineDate_b = new Date(b.NextDeadlineDate);
+            datestr = b.NextDeadlineDate;
+            deadlineDate_b = new Date(replaceAll(datestr, "-"," "));
         }
         else {
             var dateArr = b.NextDeadlineDate.split(" ");
-            deadlineDate_b = new Date(dateArr[0]);
+            datestr = dateArr[0];
+            deadlineDate_b = new Date(replaceAll(datestr, "-"," "));
         }
     }   
     return deadlineDate_a-deadlineDate_b;
