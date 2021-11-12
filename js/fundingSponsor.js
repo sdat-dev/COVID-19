@@ -9,7 +9,7 @@ var data = {
     isCrossDomain: true,
     callback: 'parseData',
     keywords: '[SOLR]keyword_exact:"Coronavirus/COVID-19" AND NOT keyword_exact:"COVID-19 Non-Research Resources"',
-    // uniqueId: '6E7E0477-B8D4-404F-B'
+    uniqueId: '6E7E0477-B8D4-404F-B'
 
 };
 
